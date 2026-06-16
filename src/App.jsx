@@ -21,7 +21,13 @@ export default function App() {
     return cmsDefault;
   });
 
-  const [activePage, setActivePage] = useState("home");
+  const [activePage, setActivePage] = useState(() => {
+    const path = window.location.pathname;
+    if (path === "/contactus" || path === "/contactus/") return "contact";
+    if (path === "/about" || path === "/about/") return "about";
+    if (path === "/products" || path === "/products/") return "products";
+    return "home";
+  });
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +43,24 @@ export default function App() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Synchronize SPA pages state on browser popstate (back/forward clicks)
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      if (path === "/contactus" || path === "/contactus/") {
+        setActivePage("contact");
+      } else if (path === "/about" || path === "/about/") {
+        setActivePage("about");
+      } else if (path === "/products" || path === "/products/") {
+        setActivePage("products");
+      } else {
+        setActivePage("home");
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   // Update CMS data locally and in storage
@@ -61,6 +85,14 @@ export default function App() {
     setActivePage(page);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Update URL path dynamically using History pushState API
+    let path = "/";
+    if (page === "about") path = "/about";
+    else if (page === "products") path = "/products";
+    else if (page === "contact") path = "/contactus";
+
+    window.history.pushState({ page }, "", path);
   };
 
   const phoneRaw = (cmsData.contact?.phone || "+91 98765 43210").replace(/\s+/g, "");
