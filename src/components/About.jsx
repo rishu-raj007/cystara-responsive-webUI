@@ -8,13 +8,13 @@ export default function About({ cms, navigateTo }) {
       <section className="about-hero">
         <div className="container" style={{ padding: "0 2rem" }}>
           <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
-            About JustAmrit
+            About {cms.brandName}
           </div>
           <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem" }} className="text-gradient">
-            Preserving Nature's Elixir
+            Purity in Every Drop
           </h1>
           <p style={{ maxWidth: "600px", color: "var(--color-text-muted)", fontSize: "1.2rem", fontWeight: 300 }}>
-            Dedicated to harvesting, bottling, and distributing pure alkaline mineral water directly from deep Himalayan aquifers.
+            Dedicated to purifying, bottling, and distributing safe, high-quality packaged drinking water using modern technology.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function About({ cms, navigateTo }) {
               </p>
             </div>
             <div style={{ position: "relative", borderRadius: "30px", overflow: "hidden", border: "1px solid var(--glass-border)", height: "400px" }}>
-              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Himalayan spring peaks" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Crystara purification facility" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </div>
 
@@ -88,7 +88,7 @@ export default function About({ cms, navigateTo }) {
               Technical Operations
             </div>
             <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Our Manufacturing Process</h2>
-            <p className="lead">How we extract, filter, test, and bottle our spring water untouched by human hands.</p>
+            <p className="lead">How we purify, filter, test, and bottle our drinking water untouched by human hands.</p>
           </div>
 
           <div className="process-steps-wrap">
@@ -113,7 +113,7 @@ export default function About({ cms, navigateTo }) {
               Visual Showcase
             </div>
             <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Behind-The-Scenes</h2>
-            <p className="lead">A glance inside our clean-room packaging facilities and source catchments.</p>
+            <p className="lead">A glance inside our clean-room packaging facilities and purification systems.</p>
           </div>
 
           <div className="bts-gallery-grid">
@@ -138,7 +138,7 @@ export default function About({ cms, navigateTo }) {
               Compliance Standards
             </div>
             <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Quality Certifications</h2>
-            <p className="lead">JustAmrit complies with all major food safety and manufacturing regulations globally.</p>
+            <p className="lead">{cms.brandName} complies with all major food safety and manufacturing regulations globally.</p>
           </div>
 
           <div className="certifications-grid">

@@ -5,11 +5,10 @@ import Home from './components/Home';
 import About from './components/About';
 import Products from './components/Products';
 import Contact from './components/Contact';
-import Admin from './components/Admin';
 
 export default function App() {
   const [cmsData, setCmsData] = useState(() => {
-    const local = localStorage.getItem("justAmritCMS");
+    const local = localStorage.getItem("crystaraCMS");
     if (local) {
       try {
         return JSON.parse(local);
@@ -18,7 +17,7 @@ export default function App() {
       }
     }
     // Fallback and initialize
-    localStorage.setItem("justAmritCMS", JSON.stringify(cmsDefault));
+    localStorage.setItem("crystaraCMS", JSON.stringify(cmsDefault));
     return cmsDefault;
   });
 
@@ -42,7 +41,7 @@ export default function App() {
 
   // Update CMS data locally and in storage
   const handleCMSUpdate = (newData) => {
-    localStorage.setItem("justAmritCMS", JSON.stringify(newData));
+    localStorage.setItem("crystaraCMS", JSON.stringify(newData));
     setCmsData(newData);
   };
 
@@ -55,14 +54,6 @@ export default function App() {
     handleCMSUpdate(updated);
   };
 
-  // Delete an inquiry
-  const handleInquiryDelete = (id) => {
-    const updated = {
-      ...cmsData,
-      inquiries: (cmsData.inquiries || []).filter(item => item.id !== id)
-    };
-    handleCMSUpdate(updated);
-  };
 
   // Switch tabs helper
   const navigateTo = (page, product = null) => {
@@ -102,11 +93,6 @@ export default function App() {
                 </li>
                 <li className={activePage === "contact" ? "active" : ""}>
                   <a onClick={() => navigateTo("contact")}>Contact Us</a>
-                </li>
-                <li>
-                  <a onClick={() => navigateTo("admin")} style={{ color: 'var(--color-water-light)' }}>
-                    <i className="ri-settings-4-line"></i> CMS Panel
-                  </a>
                 </li>
               </ul>
             </nav>
@@ -158,14 +144,6 @@ export default function App() {
             onInquirySubmit={handleInquirySubmit}
           />
         )}
-        {activePage === "admin" && (
-          <Admin 
-            cms={cmsData} 
-            onCMSUpdate={handleCMSUpdate} 
-            onInquiryDelete={handleInquiryDelete} 
-            navigateTo={navigateTo}
-          />
-        )}
       </main>
 
       {/* Shared Footer */}
@@ -180,7 +158,7 @@ export default function App() {
                 </a>
               </div>
               <p>
-                High-end natural mineral spring water drawn from glacier aquifers. Certified purity, alkaline balance, and plastic neutrality.
+                Premium packaged drinking water purified using advanced multi-stage technology. Certified purity, consistent taste, and plastic neutrality.
               </p>
               <div className="footer-socials">
                 <a href={cmsData.socials?.facebook || "#"} target="_blank" rel="noreferrer" aria-label="Facebook"><i className="ri-facebook-fill"></i></a>
@@ -196,7 +174,6 @@ export default function App() {
                 <li><a onClick={() => navigateTo("about")}>About Us</a></li>
                 <li><a onClick={() => navigateTo("products")}>Products & Catalog</a></li>
                 <li><a onClick={() => navigateTo("contact")}>Contact Us</a></li>
-                <li><a onClick={() => navigateTo("admin")}>CMS Dashboard</a></li>
               </ul>
             </div>
 
@@ -231,7 +208,7 @@ export default function App() {
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2026 {cmsData.brandName} Mineral Water. All Rights Reserved.</p>
+            <p>&copy; 2026 {cmsData.brandName} Packaged Drinking Water. All Rights Reserved.</p>
             <p>
               <span>{cmsData.supportDuration}</span> &bull; 
               <a href="#" style={{ marginLeft: '5px' }}>Privacy Policy</a> &bull; 

@@ -40,12 +40,12 @@ export default function Home({ cms, navigateTo }) {
     };
 
     // Save to localStorage directly to update CMS inquiries state
-    const local = localStorage.getItem("justAmritCMS");
+    const local = localStorage.getItem("crystaraCMS");
     if (local) {
       const parsed = JSON.parse(local);
       if (!parsed.inquiries) parsed.inquiries = [];
       parsed.inquiries.unshift(newInquiry);
-      localStorage.setItem("justAmritCMS", JSON.stringify(parsed));
+      localStorage.setItem("crystaraCMS", JSON.stringify(parsed));
       
       // Force trigger state sync in App.jsx if needed, or it will sync on reload
       // But to be clean we just let it update. We will also reload or trigger parent reload if we want.
@@ -76,7 +76,7 @@ export default function Home({ cms, navigateTo }) {
           <div className="about-intro-grid">
             <div className="scroll-reveal" style={{ opacity: 1, transform: "none" }}>
               <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
-                Brand Sourcing
+                Advanced Purification
               </div>
               <h2 style={{ fontSize: "3.5rem", lineLight: "1.1", marginBottom: "2rem" }} className="text-gradient">
                 {cms.home.companyIntroTitle}
@@ -89,10 +89,10 @@ export default function Home({ cms, navigateTo }) {
               </button>
             </div>
             <div className="scroll-reveal" style={{ position: "relative", borderRadius: "30px", overflow: "hidden", border: "1px solid var(--glass-border)", boxShadow: "var(--glass-shadow)", height: "450px", opacity: 1, transform: "none" }}>
-              <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80" alt="Purity Sourced" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80" alt="Crystara Purification" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               <div style={{ position: "absolute", bottom: "30px", left: "30px", background: "var(--glass-bg)", backdropFilter: "blur(10px)", padding: "1.5rem 2rem", borderRadius: "16px", border: "1px solid var(--glass-border)" }}>
-                <h4 style={{ fontFamily: "var(--font-body)", color: "#fff", marginBottom: "5px" }}>Pure Spring Sourced</h4>
-                <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", margin: 0, textAlign: "left" }}>100% untouched by chemicals</p>
+                <h4 style={{ fontFamily: "var(--font-body)", color: "#fff", marginBottom: "5px" }}>Multi-Stage Purified</h4>
+                <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", margin: 0, textAlign: "left" }}>100% pure and safe</p>
               </div>
             </div>
           </div>
@@ -106,8 +106,8 @@ export default function Home({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Unique Selling Points
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Crafted by Earth</h2>
-            <p className="lead">Why JustAmrit is the chosen hydration for luxury households, elite wellness coaches, and luxury restaurants.</p>
+            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Purity in Every Drop</h2>
+            <p className="lead">Why Crystara is the trusted hydration choice for homes, offices, travel, and premium venues.</p>
           </div>
           
           <div className="usp-grid" id="usp-grid-container">
@@ -206,7 +206,7 @@ export default function Home({ cms, navigateTo }) {
           <div className="trust-flex">
             <div className="trust-item">
               <h4>10+</h4>
-              <p>Years of Source Sourcing</p>
+              <p>Years of Quality Excellence</p>
             </div>
             <div className="trust-item">
               <h4>25k+</h4>
@@ -214,7 +214,7 @@ export default function Home({ cms, navigateTo }) {
             </div>
             <div className="trust-item">
               <h4>100%</h4>
-              <p>Glacial Spring Sourced</p>
+              <p>Quality Assured</p>
             </div>
             <div className="trust-item">
               <h4>4+</h4>
@@ -232,7 +232,7 @@ export default function Home({ cms, navigateTo }) {
               <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
                 Instant Enquiry
               </div>
-              <h2 className="text-gradient">Ready to Experience JustAmrit?</h2>
+              <h2 className="text-gradient">Ready to Experience Crystara?</h2>
               <p className="intro">
                 Submit your distribution request, bulk business inquiry, or corporate trial requests. Our hydration representatives will respond within 2-4 hours.
               </p>

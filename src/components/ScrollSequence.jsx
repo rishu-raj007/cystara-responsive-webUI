@@ -16,6 +16,22 @@ export default function ScrollSequence({ cms, navigateTo }) {
   const [loadingPercent, setLoadingPercent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  const slogans = [
+    "Purity You Can Trust",
+    "Hygienically Sealed & Safe",
+    "Crisp, Consistent Taste",
+    "Reliable Daily Hydration",
+    "Balanced for Your Wellness"
+  ];
+  const [sloganIdx, setSloganIdx] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSloganIdx((prev) => (prev + 1) % slogans.length);
+    }, 850);
+    return () => clearInterval(interval);
+  }, []);
+
   const frameCount = 50;
   const currentFrame = index => `/animation-frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.jpg`;
 
@@ -53,9 +69,11 @@ export default function ScrollSequence({ cms, navigateTo }) {
         }
       }
 
-      // 2. Await the first frame (index 0) so we have something to draw immediately
-      const firstImg = cachedImages[0];
-      await new Promise((resolve) => {
+      // 2. Await first frame AND a minimum timer of 2500ms
+      const minTimerPromise = new Promise((resolve) => setTimeout(resolve, 2500));
+
+      const firstFramePromise = new Promise((resolve) => {
+        const firstImg = cachedImages[0];
         if (firstImg.complete && firstImg.naturalWidth > 0) {
           resolve();
         } else {
@@ -67,6 +85,8 @@ export default function ScrollSequence({ cms, navigateTo }) {
         }
       });
 
+      await Promise.all([firstFramePromise, minTimerPromise]);
+
       if (!active) return;
 
       logDebug("First frame loaded. Showing hero & fading out preloader...");
@@ -76,7 +96,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
       if (preloaderRef.current) {
         gsap.to(preloaderRef.current, {
           opacity: 0,
-          duration: 0.5,
+          duration: 0.6,
           ease: "power2.out",
           onComplete: () => {
             if (preloaderRef.current) {
@@ -351,7 +371,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
   };
 
   return (
-    <div ref={containerRef} className="hero-scroll-wrapper" style={{ height: "650vh" }}>
+    <div ref={containerRef} className={`hero-scroll-wrapper ${isLoaded ? 'loaded' : ''}`} style={{ height: "650vh" }}>
       
       {/* On-Screen Diagnostic Debug overlay */}
       <div 
@@ -402,11 +422,11 @@ export default function ScrollSequence({ cms, navigateTo }) {
         <h1 style={{ fontFamily: "var(--font-heading)", color: "#fff", marginBottom: "10px", letterSpacing: "0.1em" }}>
           {cms.brandName}
         </h1>
-        <p style={{ color: "#64748b", fontSize: "0.85rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>
-          Loading Pure Hydration
+        <p key={sloganIdx} className="preloader-slogan">
+          {slogans[sloganIdx]}
         </p>
-        <div style={{ color: "#0ea5e9", fontSize: "1.2rem", fontWeight: 600, marginTop: "15px" }}>
-          {loadingPercent}%
+        <div style={{ color: "var(--color-text-muted)", fontSize: "0.75rem", letterSpacing: "0.15em", marginTop: "20px" }}>
+          LOADING &bull; {loadingPercent}%
         </div>
       </div>
 
@@ -421,11 +441,21 @@ export default function ScrollSequence({ cms, navigateTo }) {
           {/* Scene 1: Slogan */}
           <div className="scroll-scene" id="scene-1-title" style={{ opacity: 0, transform: "translateY(30px)", pointerEvents: "none" }}>
             <div className="scene-text-content">
+              <div className="hero-badge-wrap">
+                <span className="hero-badge">
+                  <i className="ri-sparkling-line"></i> Purified to Perfection &bull; 100% Hygienic
+                </span>
+              </div>
               <h2 className="text-gradient">{cms.home.heroTitle}</h2>
               <p>{cms.home.heroSubtitle}</p>
               <div className="scene-buttons">
                 <button onClick={() => navigateTo("contact")} className="btn btn-primary">Order Bulk</button>
                 <button onClick={() => navigateTo("products")} className="btn btn-outline">Explore Products</button>
+              </div>
+              <div className="hero-brand-values">
+                <span className="value-tag"><i className="ri-water-flash-line"></i> Multi-Stage RO</span>
+                <span className="value-tag"><i className="ri-bubble-chart-line"></i> Dual Sterilized</span>
+                <span className="value-tag"><i className="ri-flask-line"></i> Quality Tested</span>
               </div>
             </div>
             <div className="scroll-indicator">
@@ -437,8 +467,8 @@ export default function ScrollSequence({ cms, navigateTo }) {
           {/* Scene 2: Alkaline */}
           <div className="scroll-scene" id="scene-2-title" style={{ opacity: 0, transform: "translateY(30px)", pointerEvents: "none" }}>
             <div className="scene-text-content">
-              <h2 className="text-gradient-gold">Rich Alkaline Balance</h2>
-              <p>Naturally structured at 7.8 pH to support cellular hydration, acid neutralization, and active physical recovery.</p>
+              <h2 className="text-gradient-gold">Pure Packaged Hydration</h2>
+              <p>Carefully purified through a multi-stage filtration process to ensure consistent taste, hygiene, and safe everyday hydration.</p>
             </div>
           </div>
 
@@ -455,22 +485,22 @@ export default function ScrollSequence({ cms, navigateTo }) {
             <div className="desktop-spacer"></div> {/* Left spacer reserved for shifted canvas */}
             <div className="scene-text-content">
               <div className="scene-sub-label">
-                The Geological Origin
+                Advanced Purification
               </div>
               <h2 className="text-gradient">
-                Filtered by Basalt
+                Multi-Stage Filtration
               </h2>
               <p>
-                Our spring flows from deep subterranean aquifers underneath layers of volcanic rock. Over decades of percolation, particulates are removed while organic minerals are absorbed.
+                Our water is processed using modern multi-stage filtration, reverse osmosis (RO), and advanced sterilization technologies to eliminate impurities and guarantee consistent quality.
               </p>
               <div className="scene-stats-flex">
                 <div className="scene-stat-item">
-                  <h4>3,000m Depth</h4>
-                  <p>Shielded from modern pollutants</p>
+                  <h4>RO Purified</h4>
+                  <p>Clean and safe drinking water</p>
                 </div>
                 <div className="scene-stat-item gold-border">
-                  <h4>Silica Enriched</h4>
-                  <p>Promotes glowing hair and skin</p>
+                  <h4>UV Sterilized</h4>
+                  <p>Advanced hygienic processing</p>
                 </div>
               </div>
             </div>
@@ -494,7 +524,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
                 The Premium Lineup
               </h2>
               <p>
-                From sleek dining-table glass carafes to large-scale offices, JustAmrit is presented in carefully crafted, BPA-free recyclable bottles designed to preserve water structure.
+                From sleek dining-table glass carafes to large-scale offices, {cms.brandName} is presented in carefully crafted, BPA-free recyclable bottles designed to preserve freshness and purity.
               </p>
               <div className="scene-buttons">
                 <button onClick={() => navigateTo("products")} className="btn btn-primary">Compare Capacities</button>

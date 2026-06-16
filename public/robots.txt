@@ -1,8 +1,8 @@
-# Robots.txt for JustAmrit Premium Mineral Water Brand
+# Robots.txt for Crystara Premium Packaged Drinking Water Brand
 User-agent: *
 Allow: /
 
 # Exclude CMS admin panel from crawlers
 Disallow: /admin
 
-Sitemap: https://www.justamrit.com/sitemap.xml
+Sitemap: https://www.crystara.com/sitemap.xml

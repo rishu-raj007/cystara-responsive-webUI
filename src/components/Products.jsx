@@ -20,7 +20,7 @@ export default function Products({ cms, navigateTo }) {
             Hydration for Every Table
           </h1>
           <p className="lead" style={{ margin: "0 auto" }}>
-            Explore our curated range of premium mineral spring waters. Available in luxury glass and high-grade BPA-free PET packaging.
+            Explore our curated range of premium packaged drinking water. Available in luxury glass and high-grade BPA-free PET packaging.
           </p>
         </div>
       </section>
@@ -142,7 +142,7 @@ export default function Products({ cms, navigateTo }) {
               Common Queries
             </div>
             <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Frequently Asked Questions</h2>
-            <p className="lead">Get details on water sourcing, purity guidelines, custom label branding, and logistics.</p>
+            <p className="lead">Get details on purification process, quality standards, custom label branding, and logistics.</p>
           </div>
 
           <div className="faq-accordion">

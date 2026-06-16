@@ -84,7 +84,7 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
             
             {/* Left Column: Details */}
             <div className="contact-info-panel scroll-reveal" style={{ opacity: 1, transform: "none" }}>
-              <h2>Connect with JustAmrit</h2>
+              <h2>Connect with {cms.brandName}</h2>
               <p className="intro">
                 Whether you are a retailer, a five-star hotel director, or an individual seeking premium home hydration, we want to hear from you.
               </p>
@@ -229,7 +229,7 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
         <div className="container">
           <div className="map-wrapper">
             <iframe 
-              title="JustAmrit Location map"
+              title={`${cms.brandName} Location map`}
               src={cms.contact?.gmapsEmbed}
               allowFullScreen="" 
               loading="lazy" 
