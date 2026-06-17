@@ -262,12 +262,27 @@ Please contact me regarding packaged drinking water requirements.`;
                     <i className="ri-map-pin-2-fill"></i>
                   </div>
                   <div className="detail-text">
-                    <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Manufacturing Unit</h3>
+                    <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Contact Address</h3>
                     <p style={{ margin: 0, fontSize: '1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.6, whiteSpace: 'pre-line' }}>
-                      Shital Pet Industries{"\n"}
-                      Bhitia, Kandra Industrial Area{"\n"}
-                      Dhanbad - 828109{"\n"}
-                      Jharkhand
+                      C10, Nalanda Green City{"\n"}
+                      Baliyapur Hirak Road, Near JP Hospital{"\n"}
+                      Dhanbad, Jharkhand - 826005
+                    </p>
+                  </div>
+                </div>
+
+                <div className="detail-card-custom" style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '2rem', borderRadius: '20px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start', boxShadow: 'var(--glass-shadow)' }}>
+                  <div className="detail-icon-wrap" style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(14, 165, 233, 0.1)', border: '1px solid var(--color-ice-border)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-water-primary)', fontSize: '1.3rem', flexShrink: 0 }}>
+                    <i className="ri-shield-check-fill"></i>
+                  </div>
+                  <div className="detail-text">
+                    <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Manufacturer Details</h3>
+                    <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.6 }}>
+                      <strong>Facility:</strong> Shital Pet Industries<br />
+                      <strong>Certifications:</strong> FSSAI, BIS &amp; ISI Certified<br />
+                      <span style={{ display: 'block', marginTop: '0.5rem', fontStyle: 'italic', fontSize: '0.9rem', color: 'var(--color-water-light)' }}>
+                        GST registered and the first packaged drinking water plant in Dhanbad, running for over 18 years.
+                      </span>
                     </p>
                   </div>
                 </div>
