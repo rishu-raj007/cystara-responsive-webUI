@@ -10,7 +10,7 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
     message: ''
   });
 
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [errors, setErrors] = useState({});
 
   // Prepopulate message if product selected
   useEffect(() => {
@@ -25,32 +25,50 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = 'Full Name is required';
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone Number is required';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Enquiry Message is required';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, phone, email, business, message } = formData;
-    
-    if (!name || !phone || !email || !message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
+    if (!validateForm()) return;
 
-    const newInquiry = {
-      id: Date.now(),
-      name,
-      phone,
-      email,
-      business: business || "Direct Consumer",
-      message,
-      date: new Date().toISOString().split("T")[0]
-    };
+    const whatsappNumber = "917070696936";
+    const whatsappMessage = `Hello Crystara,
 
-    // Callback to App.jsx to register inquiry
-    onInquirySubmit(newInquiry);
+New Enquiry Details:
 
-    // Reset Form & show success modal
-    setShowSuccess(true);
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email || 'Not Provided'}
+Business Name: ${formData.business || 'Not Provided'}
+Message: ${formData.message}
+
+Please contact me regarding packaged drinking water requirements.`;
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
+
+    // Reset Form
     setFormData({
       name: '',
       phone: '',
@@ -89,37 +107,32 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
                 Whether you are a retailer, a five-star hotel director, or an individual seeking premium home hydration, we want to hear from you.
               </p>
               
-              <div className="contact-details-list">
-                <div className="detail-item">
-                  <div className="detail-icon-wrap"><i className="ri-map-pin-2-fill"></i></div>
-                  <div className="detail-text">
-                    <h3>Head Office Address</h3>
-                    <p>{cms.contact?.address}</p>
+              <div className="contact-details-list" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                <div className="detail-card-custom" style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '2rem', borderRadius: '20px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start', boxShadow: 'var(--glass-shadow)' }}>
+                  <div className="detail-icon-wrap" style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(14, 165, 233, 0.1)', border: '1px solid var(--color-ice-border)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-water-primary)', fontSize: '1.3rem', flexShrink: 0 }}>
+                    <i className="ri-phone-fill"></i>
                   </div>
-                </div>
-                <div className="detail-item">
-                  <div className="detail-icon-wrap"><i className="ri-phone-fill"></i></div>
                   <div className="detail-text">
-                    <h3>Supply & Support Hotlines</h3>
-                    <p>
-                      <a href={`tel:${cms.contact?.phone.replace(/\s+/g, "")}`}>{cms.contact?.phone}</a>
+                    <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Call Our Supply Desk</h3>
+                    <p style={{ margin: 0, fontSize: '1.05rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.6 }}>
+                      <a href="tel:+917677912567" style={{ display: 'block', color: 'var(--color-text-muted)' }} className="hover-link">+91 76779 12567</a>
+                      <a href="tel:+917070696936" style={{ display: 'block', color: 'var(--color-text-muted)', marginTop: '4px' }} className="hover-link">+91 70706 96936</a>
                     </p>
                   </div>
                 </div>
-                <div className="detail-item">
-                  <div className="detail-icon-wrap"><i className="ri-mail-fill"></i></div>
-                  <div className="detail-text">
-                    <h3>Commercial & Press Email</h3>
-                    <p>
-                      <a href={`mailto:${cms.contact?.email}`}>{cms.contact?.email}</a>
-                    </p>
+
+                <div className="detail-card-custom" style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '2rem', borderRadius: '20px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start', boxShadow: 'var(--glass-shadow)' }}>
+                  <div className="detail-icon-wrap" style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'rgba(14, 165, 233, 0.1)', border: '1px solid var(--color-ice-border)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-water-primary)', fontSize: '1.3rem', flexShrink: 0 }}>
+                    <i className="ri-map-pin-2-fill"></i>
                   </div>
-                </div>
-                <div className="detail-item">
-                  <div className="detail-icon-wrap"><i className="ri-time-fill"></i></div>
                   <div className="detail-text">
-                    <h3>Administrative Hours</h3>
-                    <p>{cms.contact?.hours}</p>
+                    <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Manufacturing Unit</h3>
+                    <p style={{ margin: 0, fontSize: '1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.6, whiteSpace: 'pre-line' }}>
+                      Shital Pet Industries{"\n"}
+                      Bhitia, Kandra Industrial Area{"\n"}
+                      Dhanbad - 828109{"\n"}
+                      Jharkhand
+                    </p>
                   </div>
                 </div>
               </div>
@@ -146,7 +159,7 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
                 <h2>Direct Inquiry Form</h2>
                 <p>Register your distribution or delivery requests below.</p>
               </div>
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form onSubmit={handleSubmit} className="contact-form" noValidate>
                 <div className="form-row-2">
                   <div className="form-group">
                     <label htmlFor="name">Full Name *</label>
@@ -155,11 +168,11 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
                       id="name" 
                       name="name" 
                       className="form-control" 
-                      placeholder="Aarav Sharma" 
+                      placeholder="Your Full Name" 
                       value={formData.name}
                       onChange={handleInputChange}
-                      required 
                     />
+                    {errors.name && <span className="error-message" style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '0.4rem', fontWeight: 500 }}>{errors.name}</span>}
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number *</label>
@@ -168,35 +181,34 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
                       id="phone" 
                       name="phone" 
                       className="form-control" 
-                      placeholder="+91 98765 43210" 
+                      placeholder="Your Mobile Number" 
                       value={formData.phone}
                       onChange={handleInputChange}
-                      required 
                     />
+                    {errors.phone && <span className="error-message" style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '0.4rem', fontWeight: 500 }}>{errors.phone}</span>}
                   </div>
                 </div>
                 <div className="form-row-2">
                   <div className="form-group">
-                    <label htmlFor="email">Email Address *</label>
+                    <label htmlFor="email">Email Address</label>
                     <input 
                       type="email" 
                       id="email" 
                       name="email" 
                       className="form-control" 
-                      placeholder="aarav@imperialhotel.com" 
+                      placeholder="your@email.com" 
                       value={formData.email}
                       onChange={handleInputChange}
-                      required 
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="business">Business Name (Optional)</label>
+                    <label htmlFor="business">Business Name</label>
                     <input 
                       type="text" 
                       id="business" 
                       name="business" 
                       className="form-control" 
-                      placeholder="The Imperial Hotel" 
+                      placeholder="Hotel / Shop / Distributor Name" 
                       value={formData.business}
                       onChange={handleInputChange}
                     />
@@ -208,14 +220,14 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
                     id="message" 
                     name="message" 
                     className="form-control" 
-                    placeholder="Interested in scheduling weekly water delivery..." 
+                    placeholder="Tell us your requirement, quantity, delivery location, or dealership enquiry..." 
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
                   ></textarea>
+                  {errors.message && <span className="error-message" style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '0.4rem', fontWeight: 500 }}>{errors.message}</span>}
                 </div>
                 <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "1rem" }}>
-                  Submit Inquiry <i className="ri-send-plane-fill"></i>
+                  Submit Enquiry <i className="ri-send-plane-fill"></i>
                 </button>
               </form>
             </div>
@@ -239,17 +251,7 @@ export default function Contact({ cms, selectedProduct, setSelectedProduct, onIn
         </div>
       </section>
 
-      {/* Success Modal */}
-      {showSuccess && (
-        <div className="custom-success-modal active">
-          <div className="success-modal-content">
-            <div className="success-icon-wrap"><i className="ri-checkbox-circle-fill"></i></div>
-            <h2>Inquiry Submitted Successfully</h2>
-            <p>Thank you for connecting. Our distribution support team will email or call you within 2-4 business hours.</p>
-            <button onClick={() => setShowSuccess(false)} className="btn btn-primary">Close</button>
-          </div>
-        </div>
-      )}
+
 
     </div>
   );

@@ -4,11 +4,12 @@ export const cmsDefault = {
   tagline: "Purity and Quality You Can Trust",
   supportDuration: "12 Months Comprehensive Support",
   contact: {
-    phone: "+91 98765 43210",
-    whatsapp: "+91 98765 43210",
+    phone: "+91 76779 12567",
+    phone2: "+91 70706 96936",
+    whatsapp: "+91 70706 96936",
     email: "info@crystara.com",
-    address: "108, Crystara Eco Industrial Park, Dehradun, Uttarakhand, India",
-    gmapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110058.45564883196!2d78.01633519999999!3d30.3164945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c35b3e204b%3A0xd097b69fbda0843d!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    address: "Shital Pet Industries\nBhitia, Kandra Industrial Area\nP.O. Bhitia\nP.S. Barwadda G.T. Road\nDhanbad - 828109\nJharkhand, India",
+    gmapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0468962002305!2d86.4172403!3d23.8169623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f10a174c82b0e9%3A0xe54cb1783cfd425b!2sKandra%20Industrial%20Area%2C%20Jharkhand%20828109!5e0!3m2!1sen!2sin!4v1718600000000!5m2!1sen!2sin",
     hours: "Mon - Sat: 9:00 AM - 7:00 PM, Sunday: Closed"
   },
   socials: {

@@ -11,7 +11,11 @@ export default function App() {
     const local = localStorage.getItem("crystaraCMS");
     if (local) {
       try {
-        return JSON.parse(local);
+        const parsed = JSON.parse(local);
+        // Force update contact details to stay synchronized with cmsDefault
+        parsed.contact = cmsDefault.contact;
+        localStorage.setItem("crystaraCMS", JSON.stringify(parsed));
+        return parsed;
       } catch (e) {
         console.error("Failed to parse CMS data", e);
       }
@@ -95,8 +99,8 @@ export default function App() {
     window.history.pushState({ page }, "", path);
   };
 
-  const phoneRaw = (cmsData.contact?.phone || "+91 98765 43210").replace(/\s+/g, "");
-  const waRaw = (cmsData.contact?.whatsapp || "+91 98765 43210").replace(/[^0-9]/g, "");
+  const phoneRaw = (cmsData.contact?.phone || "+91 76779 12567").replace(/\s+/g, "");
+  const waRaw = (cmsData.contact?.whatsapp || "+91 70706 96936").replace(/[^0-9]/g, "");
 
   return (
     <div className={activePage === "admin" ? "admin-body" : ""}>
@@ -223,18 +227,27 @@ export default function App() {
             <div className="footer-links footer-contact">
               <h3>Contact Us</h3>
               <ul>
-                <li>
-                  <i className="ri-map-pin-2-fill"></i>
-                  <span>{cmsData.contact?.address}</span>
+                <li style={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <i className="ri-map-pin-2-fill" style={{ marginTop: '3px' }}></i>
+                  <span style={{ whiteSpace: 'pre-line' }}>{cmsData.contact?.address}</span>
                 </li>
-                <li>
-                  <i className="ri-phone-fill"></i>
-                  <span>{cmsData.contact?.phone}</span>
+                <li style={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <i className="ri-phone-fill" style={{ marginTop: '3px' }}></i>
+                  <div>
+                    <div><a href={`tel:${(cmsData.contact?.phone || "").replace(/\s+/g, "")}`}>{cmsData.contact?.phone}</a></div>
+                    {cmsData.contact?.phone2 && (
+                      <div style={{ marginTop: '4px' }}>
+                        <a href={`tel:${(cmsData.contact?.phone2 || "").replace(/\s+/g, "")}`}>{cmsData.contact?.phone2}</a>
+                      </div>
+                    )}
+                  </div>
                 </li>
-                <li>
-                  <i className="ri-mail-fill"></i>
-                  <span>{cmsData.contact?.email}</span>
-                </li>
+                {cmsData.contact?.email && (
+                  <li style={{ display: 'flex', alignItems: 'flex-start' }}>
+                    <i className="ri-mail-fill" style={{ marginTop: '3px' }}></i>
+                    <span><a href={`mailto:${cmsData.contact?.email}`}>{cmsData.contact?.email}</a></span>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

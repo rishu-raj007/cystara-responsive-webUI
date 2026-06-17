@@ -1883,9 +1883,47 @@ p.lead {
   gap: 2rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .form-row-2 {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.detail-card-custom {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-smooth);
+}
+
+.detail-card-custom:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(14, 165, 233, 0.1);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
+  animation: fadeInError 0.3s ease-out;
+}
+
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
