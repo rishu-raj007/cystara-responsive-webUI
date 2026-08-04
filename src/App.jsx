@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Products from './components/Products';
 import Contact from './components/Contact';
+import Facility from './components/Facility';
 
 export default function App() {
   const [cmsData, setCmsData] = useState(() => {
@@ -30,6 +31,7 @@ export default function App() {
     if (path === "/contactus" || path === "/contactus/") return "contact";
     if (path === "/about" || path === "/about/") return "about";
     if (path === "/products" || path === "/products/") return "products";
+    if (path === "/facility" || path === "/facility/") return "facility";
     return "home";
   });
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -59,6 +61,8 @@ export default function App() {
         setActivePage("about");
       } else if (path === "/products" || path === "/products/") {
         setActivePage("products");
+      } else if (path === "/facility" || path === "/facility/") {
+        setActivePage("facility");
       } else {
         setActivePage("home");
       }
@@ -95,6 +99,7 @@ export default function App() {
     if (page === "about") path = "/about";
     else if (page === "products") path = "/products";
     else if (page === "contact") path = "/contactus";
+    else if (page === "facility") path = "/facility";
 
     window.history.pushState({ page }, "", path);
   };
@@ -126,6 +131,9 @@ export default function App() {
                 </li>
                 <li className={activePage === "products" ? "active" : ""}>
                   <a onClick={() => navigateTo("products")}>Products</a>
+                </li>
+                <li className={activePage === "facility" ? "active" : ""}>
+                  <a onClick={() => navigateTo("facility")}>Facility</a>
                 </li>
                 <li className={activePage === "contact" ? "active" : ""}>
                   <a onClick={() => navigateTo("contact")}>Contact Us</a>
@@ -172,6 +180,12 @@ export default function App() {
             navigateTo={navigateTo} 
           />
         )}
+        {activePage === "facility" && (
+          <Facility 
+            cms={cmsData} 
+            navigateTo={navigateTo}
+          />
+        )}
         {activePage === "contact" && (
           <Contact 
             cms={cmsData} 
@@ -209,6 +223,7 @@ export default function App() {
                 <li><a onClick={() => navigateTo("home")}>Home</a></li>
                 <li><a onClick={() => navigateTo("about")}>About Us</a></li>
                 <li><a onClick={() => navigateTo("products")}>Products & Catalog</a></li>
+                <li><a onClick={() => navigateTo("facility")}>Facility</a></li>
                 <li><a onClick={() => navigateTo("contact")}>Contact Us</a></li>
               </ul>
             </div>
