@@ -417,7 +417,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
         }}
       >
         <div style={{ fontSize: "3rem", color: "#0ea5e9", marginBottom: "20px" }}>
-          <i className="ri-drop-fill" style={{ animation: "floatAnim 1.5s infinite ease-in-out", display: "inline-block" }}></i>
+          <i className="ri-drop-fill" style={{ animation: "floatAnimVertical 1.5s infinite ease-in-out", display: "inline-block" }}></i>
         </div>
         <h1 style={{ fontFamily: "var(--font-heading)", color: "#fff", marginBottom: "10px", letterSpacing: "0.1em" }}>
           {cms.brandName}
