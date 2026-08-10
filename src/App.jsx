@@ -13,10 +13,13 @@ export default function App() {
     if (local) {
       try {
         const parsed = JSON.parse(local);
-        // Force update contact details to stay synchronized with cmsDefault
-        parsed.contact = cmsDefault.contact;
-        localStorage.setItem("crystaraCMS", JSON.stringify(parsed));
-        return parsed;
+        // Synchronize all static details with cmsDefault, keeping user inquiries
+        const synchronized = {
+          ...cmsDefault,
+          inquiries: parsed.inquiries || cmsDefault.inquiries
+        };
+        localStorage.setItem("crystaraCMS", JSON.stringify(synchronized));
+        return synchronized;
       } catch (e) {
         console.error("Failed to parse CMS data", e);
       }
@@ -235,7 +238,6 @@ export default function App() {
                 <li><a onClick={() => navigateTo("products")}>500ml Daily Elegance</a></li>
                 <li><a onClick={() => navigateTo("products")}>1L Active Reserve</a></li>
                 <li><a onClick={() => navigateTo("products")}>2L Family Banquet</a></li>
-                <li><a onClick={() => navigateTo("products")}>20L Corporate Jar</a></li>
               </ul>
             </div>
 

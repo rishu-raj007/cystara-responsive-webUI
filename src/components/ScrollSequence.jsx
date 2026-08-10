@@ -439,7 +439,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
         <div className="canvas-overlay-content">
           
           {/* Scene 1: Slogan */}
-          <div className="scroll-scene" id="scene-1-title" style={{ opacity: 0, transform: "translateY(30px)", pointerEvents: "none" }}>
+          <div className="scroll-scene" id="scene-1-title" style={{ opacity: 1, transform: "translateY(0px)", pointerEvents: "auto" }}>
             <div className="scene-text-content">
               <div className="hero-badge-wrap">
                 <span className="hero-badge">

@@ -82,7 +82,7 @@ export const cmsDefault = {
       price: "₹20",
       desc: "Compact hydration. Ideal for dining tables, corporate boardrooms, conferences, and quick travel.",
       specs: { "Volume": "250 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
-      img: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&w=400&q=80"
+      img: "/crystara-250ml.jpg"
     },
     {
       id: "p500",
@@ -91,7 +91,7 @@ export const cmsDefault = {
       price: "₹35",
       desc: "Convenient everyday size. Ideal for personal hydration, commuting, and active lifestyles.",
       specs: { "Volume": "500 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
-      img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80"
+      img: "/crystara-500ml.jpg"
     },
     {
       id: "p1l",
@@ -100,7 +100,7 @@ export const cmsDefault = {
       price: "₹60",
       desc: "Our standard size. Made for workouts, office desks, travel, and reliable daily hydration.",
       specs: { "Volume": "1.0 Litre", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 12 Bottles", "TDS": "80-120 ppm" },
-      img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=400&q=80"
+      img: "/crystara-1l.png"
     },
     {
       id: "p2l",
@@ -110,15 +110,6 @@ export const cmsDefault = {
       desc: "Designed for home dining, small gatherings, picnics, and weekend travel.",
       specs: { "Volume": "2.0 Litres", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 9 Bottles", "TDS": "80-120 ppm" },
       img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      id: "p20l",
-      name: "Crystara Jar - 20L",
-      category: "Bulk Dispenser Jars",
-      price: "₹150",
-      desc: "High-capacity supply. Perfect for homes, offices, commercial spaces, and large events.",
-      specs: { "Volume": "20 Litres", "pH Level": "7.2 pH (Balanced)", "Packaging": "BPA-Free Rigid Jar", "TDS": "80-120 ppm" },
-      img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80"
     }
   ],
   testimonials: [
