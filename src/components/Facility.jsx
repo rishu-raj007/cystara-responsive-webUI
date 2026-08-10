@@ -85,9 +85,32 @@ export default function Facility({ cms, navigateTo }) {
                 FSSAI, BIS &amp; ISI Certified Operations
               </p>
               
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.8, marginBottom: '2.5rem' }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 GST registered and home to the very first packaged drinking water plant in Dhanbad, running seamlessly for over 18 years. Our advanced facility adheres strictly to the highest standards of hygiene and filtration safety.
               </p>
+
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.02)',
+                border: '1px solid rgba(255, 255, 255, 0.05)',
+                borderRadius: '16px',
+                padding: '1.5rem',
+                margin: '2rem auto',
+                maxWidth: '600px',
+                textAlign: 'center',
+                boxShadow: 'inset 0 1px 1px rgba(255, 255, 255, 0.05)'
+              }}>
+                <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--color-water-primary)', letterSpacing: '0.15em', fontWeight: 600, marginBottom: '0.5rem' }}>
+                  Marketed & Distributed By
+                </div>
+                <h4 style={{ fontSize: '1.25rem', color: '#fff', fontWeight: 600, margin: '0 0 0.6rem 0', fontFamily: 'var(--font-heading)' }}>
+                  AquaViora Beverages Pvt LTD
+                </h4>
+                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', margin: 0, fontWeight: 300, lineHeight: 1.6 }}>
+                  C10, Nalanda Green City<br />
+                  Baliyapur Hirak Road, Near JP Hospital<br />
+                  Dhanbad, Jharkhand - 826005
+                </p>
+              </div>
               
               {/* Badges / Highlights */}
               <div style={{
@@ -95,7 +118,7 @@ export default function Facility({ cms, navigateTo }) {
                 flexWrap: 'wrap',
                 justifyContent: 'center',
                 gap: '1.2rem',
-                marginTop: '1.5rem'
+                marginTop: '2rem'
               }}>
                 <div style={{ 
                   background: 'rgba(14, 165, 233, 0.05)', 

@@ -79,7 +79,7 @@ export const cmsDefault = {
       id: "p250",
       name: "Crystara Petit - 250ml",
       category: "Premium Glass / PET",
-      price: "₹20",
+      price: "₹10",
       desc: "Compact hydration. Ideal for dining tables, corporate boardrooms, conferences, and quick travel.",
       specs: { "Volume": "250 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
       img: "/crystara-250ml.jpg"
@@ -88,7 +88,7 @@ export const cmsDefault = {
       id: "p500",
       name: "Crystara Daily - 500ml",
       category: "Premium Glass / PET",
-      price: "₹35",
+      price: "₹15",
       desc: "Convenient everyday size. Ideal for personal hydration, commuting, and active lifestyles.",
       specs: { "Volume": "500 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
       img: "/crystara-500ml.jpg"
@@ -97,19 +97,10 @@ export const cmsDefault = {
       id: "p1l",
       name: "Crystara Reserve - 1L",
       category: "Premium Glass / PET",
-      price: "₹60",
+      price: "₹20",
       desc: "Our standard size. Made for workouts, office desks, travel, and reliable daily hydration.",
       specs: { "Volume": "1.0 Litre", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 12 Bottles", "TDS": "80-120 ppm" },
       img: "/crystara-1l.png"
-    },
-    {
-      id: "p2l",
-      name: "Crystara Family - 2L",
-      category: "Premium Glass / PET",
-      price: "₹90",
-      desc: "Designed for home dining, small gatherings, picnics, and weekend travel.",
-      specs: { "Volume": "2.0 Litres", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 9 Bottles", "TDS": "80-120 ppm" },
-      img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=400&q=80"
     }
   ],
   testimonials: [

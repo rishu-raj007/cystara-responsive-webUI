@@ -237,7 +237,6 @@ export default function App() {
                 <li><a onClick={() => navigateTo("products")}>250ml Petit Carafe</a></li>
                 <li><a onClick={() => navigateTo("products")}>500ml Daily Elegance</a></li>
                 <li><a onClick={() => navigateTo("products")}>1L Active Reserve</a></li>
-                <li><a onClick={() => navigateTo("products")}>2L Family Banquet</a></li>
               </ul>
             </div>
 
