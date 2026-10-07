@@ -29,35 +29,53 @@ export default function Products({ cms, navigateTo }) {
       <section className="section-padding" style={{ backgroundColor: "var(--color-dark-bg)" }}>
         <div className="container">
           <div className="products-grid">
-            {(cms.products || []).map((p) => (
-              <div key={p.id} className="product-detail-card scroll-reveal" id={`prod-card-${p.id}`} style={{ opacity: 1, transform: "none" }}>
-                <div className="prod-img-box">
-                  <img src={p.img} alt={p.name} loading="lazy" />
-                  <div className="prod-category">{p.category}</div>
-                </div>
-                <div className="prod-info-box">
-                  <h3>{p.name}</h3>
-                  <p className="prod-desc">{p.desc}</p>
-                  <div className="prod-specs-box">
-                    {Object.entries(p.specs || {}).map(([key, val]) => (
-                      <div key={key} className="spec-row">
-                        <span className="spec-label">{key}:</span>
-                        <span className="spec-value">{val}</span>
-                      </div>
-                    ))}
+            {(cms.products || []).map((p) => {
+              const isComingSoon = p.comingSoon || p.id === 'p250' || p.id === 'p500';
+              return (
+                <div key={p.id} className="product-detail-card scroll-reveal" id={`prod-card-${p.id}`} style={{ opacity: 1, transform: "none" }}>
+                  <div className="prod-img-box">
+                    <img src={p.img} alt={p.name} loading="lazy" />
+                    <div className="prod-category">{p.category}</div>
+                    {isComingSoon && (
+                      <div className="prod-coming-soon-badge">Coming Soon</div>
+                    )}
                   </div>
-                  <div className="prod-footer">
-                    <span className="prod-price">{p.price}</span>
-                    <button 
-                      onClick={() => navigateTo("contact", p.name)} 
-                      className="btn btn-primary btn-sm"
-                    >
-                      Order Now
-                    </button>
+                  <div className="prod-info-box">
+                    <h3>{p.name}</h3>
+                    <p className="prod-desc">{p.desc}</p>
+                    <div className="prod-specs-box">
+                      {Object.entries(p.specs || {})
+                        .filter(([key]) => key !== "pH Level")
+                        .map(([key, val]) => (
+                          <div key={key} className="spec-row">
+                            <span className="spec-label">{key}:</span>
+                            <span className="spec-value">{val}</span>
+                          </div>
+                        ))}
+                    </div>
+                    <div className="prod-footer">
+                      <span className="prod-price">{p.price}</span>
+                      {isComingSoon ? (
+                        <button 
+                          disabled 
+                          className="btn btn-secondary btn-sm"
+                          style={{ opacity: 0.65, cursor: "not-allowed", pointerEvents: "none" }}
+                        >
+                          Coming Soon
+                        </button>
+                      ) : (
+                        <button 
+                          onClick={() => navigateTo("contact", p.name)} 
+                          className="btn btn-primary btn-sm"
+                        >
+                          Order Now
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -79,7 +97,6 @@ export default function Products({ cms, navigateTo }) {
                 <tr>
                   <th>Product Sizing</th>
                   <th>Volume</th>
-                  <th>pH Balance</th>
                   <th>TDS Level</th>
                   <th>Packaging Format</th>
                   <th>Price Tag</th>
@@ -87,24 +104,36 @@ export default function Products({ cms, navigateTo }) {
                 </tr>
               </thead>
               <tbody id="comparison-table-body">
-                {(cms.products || []).map((p) => (
-                  <tr key={p.id}>
-                    <td className="comp-item-name"><strong>{p.name}</strong></td>
-                    <td>{p.specs?.Volume || "-"}</td>
-                    <td>{p.specs?.["pH Level"] || "-"}</td>
-                    <td>{p.specs?.TDS || "-"}</td>
-                    <td>{p.specs?.Packaging || "-"}</td>
-                    <td className="comp-price">{p.price}</td>
-                    <td>
-                      <button 
-                        onClick={() => navigateTo("contact", p.name)} 
-                        className="btn btn-outline btn-xs"
-                      >
-                        Inquire
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                {(cms.products || []).map((p) => {
+                  const isComingSoon = p.comingSoon || p.id === 'p250' || p.id === 'p500';
+                  return (
+                    <tr key={p.id}>
+                      <td className="comp-item-name"><strong>{p.name}</strong></td>
+                      <td>{p.specs?.Volume || "-"}</td>
+                      <td>{p.specs?.TDS || "-"}</td>
+                      <td>{p.specs?.Packaging || "-"}</td>
+                      <td className="comp-price">{p.price}</td>
+                      <td>
+                        {isComingSoon ? (
+                          <button 
+                            disabled 
+                            className="btn btn-outline btn-xs"
+                            style={{ opacity: 0.5, cursor: "not-allowed", pointerEvents: "none" }}
+                          >
+                            Coming Soon
+                          </button>
+                        ) : (
+                          <button 
+                            onClick={() => navigateTo("contact", p.name)} 
+                            className="btn btn-outline btn-xs"
+                          >
+                            Inquire
+                          </button>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

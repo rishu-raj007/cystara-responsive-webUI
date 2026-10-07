@@ -7,7 +7,7 @@ export const cmsDefault = {
     phone: "+91 76779 12567",
     phone2: "+91 70706 96936",
     whatsapp: "+91 70706 96936",
-    email: "info@crystarawater.com",
+    email: "customercare@crystarawater.com",
     address: "C10, Nalanda Green City\nBaliyapur Hirak Road, Near JP Hospital\nDhanbad, Jharkhand - 826005",
     gmapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.109849547515!2d86.4597403!3d23.8146923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f10befdfb3dfbf%3A0x8db57d34197e88f!2sHirak%20Rd%2C%20Dhanbad%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1718600000000!5m2!1sen!2sin",
     hours: "Mon - Sat: 9:00 AM - 7:00 PM, Sunday: Closed"
@@ -21,7 +21,7 @@ export const cmsDefault = {
     heroTitle: "Pure Packaged Drinking Water for Everyday Hydration",
     heroSubtitle: "Experience pure, safe, and refreshing drinking water processed through multi-stage purification technology for consistent taste.",
     companyIntroTitle: "Advanced Purification, Unmatched Purity",
-    companyIntroText: "Crystara is premium packaged drinking water, purified using advanced multi-stage filtration and state-of-the-art purification technology. Our water undergoes rigorous quality checks and sterile clean-room bottling to ensure maximum hygiene and safety. Formulated for a crisp, clean, and consistent taste, Crystara provides reliable hydration for your everyday needs, whether at home, at work, or on the go.",
+    companyIntroText: "Crystara is premium packaged drinking water, purified using advanced multi-stage filtration and state-of-the-art purification technology. Our water undergoes rigorous quality checks and sterile clean-room bottling to ensure maximum purity and safety. Formulated for a crisp, clean, and consistent taste, Crystara provides reliable hydration for your everyday needs, whether at home, at work, or on the go.",
     usps: [
       { id: "usp1", title: "Multi-Stage Purified", desc: "Processed using advanced multi-stage filtration and reverse osmosis to remove impurities.", icon: "ri-water-flash-line" },
       { id: "usp2", title: "Balanced & Fresh", desc: "Carefully treated to ensure consistent quality, refreshing taste, and perfect daily hydration.", icon: "ri-heart-pulse-line" },
@@ -39,9 +39,9 @@ export const cmsDefault = {
   },
   about: {
     storyTitle: "Dedicated to Pure and Safe Hydration",
-    storyText: "Crystara was founded on a commitment to deliver the highest standard of safe and pure packaged drinking water for everyday living. Our brand focuses on advanced multi-stage filtration, leveraging modern purification technology and stringent quality control. Every bottle of Crystara is packaged in our state-of-the-art, hygienic facility, ensuring a crisp, consistent taste and reliable hydration that families and businesses can trust.",
+    storyText: "Crystara was founded on a commitment to deliver the highest standard of safe and pure packaged drinking water for everyday living. Our brand focuses on advanced multi-stage filtration, leveraging modern purification technology and stringent quality control. Every bottle of Crystara is packaged in our state-of-the-art facility, ensuring a crisp, consistent taste and reliable hydration that families and businesses can trust.",
     mission: "To provide safe, refreshing, and reliable packaged drinking water through advanced purification, clean manufacturing practices, and sustainable bottling solutions.",
-    vision: "To be the most trusted and reliable brand for pure packaged drinking water, recognized for exceptional quality, hygiene, and environmental responsibility.",
+    vision: "To be the most trusted and reliable brand for pure packaged drinking water, recognized for exceptional quality, purity, and environmental responsibility.",
     coreValues: [
       { title: "Absolute Purity", desc: "Pure, clean, and processed through strict multi-stage filtration to eliminate impurities." },
       { title: "Sustainability First", desc: "Plastic-negative operations. We collect and recycle twice the plastic weight we distribute." },
@@ -52,7 +52,7 @@ export const cmsDefault = {
       { step: "01", title: "Multi-Stage Pre-Filtration", desc: "Water passes through multi-grade sand and carbon filters to remove sediment, chlorine, and organic compounds." },
       { step: "02", title: "Reverse Osmosis (RO)", desc: "Filtered through high-efficiency reverse osmosis membranes to eliminate dissolved solids and impurities." },
       { step: "03", title: "UV & Ozone Sterilization", desc: "Advanced dual sterilization using UV sterilizers and ozone barriers to ensure absolute biological safety." },
-      { step: "04", title: "Hygienic Auto-Bottling", desc: "Fully automated bottle blowing, rinsing, filling, and sealing under strict sterile conditions." }
+      { step: "04", title: "Automated Bottling", desc: "Fully automated bottle blowing, rinsing, filling, and sealing under strict sterile conditions." }
     ],
     gallery: [
       { title: "Purification Center", desc: "Our state-of-the-art purification and testing center.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
@@ -81,8 +81,9 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹10",
       desc: "Compact hydration. Ideal for dining tables, corporate boardrooms, conferences, and quick travel.",
-      specs: { "Volume": "250 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
-      img: "/crystara-250ml.jpg"
+      specs: { "Volume": "250 ml", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
+      img: "/crystara-250ml.jpg",
+      comingSoon: true
     },
     {
       id: "p500",
@@ -90,8 +91,9 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹15",
       desc: "Convenient everyday size. Ideal for personal hydration, commuting, and active lifestyles.",
-      specs: { "Volume": "500 ml", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
-      img: "/crystara-500ml.jpg"
+      specs: { "Volume": "500 ml", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
+      img: "/crystara-500ml.jpg",
+      comingSoon: true
     },
     {
       id: "p1l",
@@ -99,8 +101,9 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹20",
       desc: "Our standard size. Made for workouts, office desks, travel, and reliable daily hydration.",
-      specs: { "Volume": "1.0 Litre", "pH Level": "7.2 pH (Balanced)", "Packaging": "Case of 12 Bottles", "TDS": "80-120 ppm" },
-      img: "/crystara-1l.png"
+      specs: { "Volume": "1.0 Litre", "Packaging": "Case of 12 Bottles", "TDS": "80-120 ppm" },
+      img: "/crystara-1l.png",
+      comingSoon: false
     }
   ],
   testimonials: [
@@ -109,10 +112,9 @@ export const cmsDefault = {
     { id: "t3", name: "Vikram Rathore", role: "Premium Retailer, Royal Beverages", text: "Our clients specifically prefer Crystara. The focus on multi-stage purification and quality assurance resonates with them, and the delivery logistics are flawless." }
   ],
   faqs: [
-    { q: "What makes Crystara packaged drinking water different?", a: "Crystara is high-quality packaged drinking water purified using advanced multi-stage filtration, reverse osmosis (RO), and UV sterilization. We focus on consistent taste, purity, and hygiene, ensuring every bottle is safe and refreshing for everyday hydration." },
+    { q: "What makes Crystara packaged drinking water different?", a: "Crystara is high-quality packaged drinking water purified using advanced multi-stage filtration, reverse osmosis (RO), and UV sterilization. We focus on consistent taste, purity, and safety, ensuring every bottle is safe and refreshing for everyday hydration." },
     { q: "What is the pH level of Crystara water?", a: "Crystara drinking water is processed to maintain a balanced, neutral pH level, providing a clean, refreshing taste that is easy on the palate and perfect for daily consumption." },
-    { q: "Do you supply water in customized packaging for corporate events?", a: "Yes, we offer premium custom label branding for corporate events, five-star hospitality suites, and large-scale weddings. You can select custom labels for our 250ml and 500ml bottles to align with your corporate branding." },
-    { q: "How do you ensure plastic neutrality?", a: "We partner with local waste recovery agencies to collect and recycle twice the equivalent mass of PET plastic that we launch. In addition, our premium bottles are 100% recyclable and manufactured using high-quality glass-grade polymers designed to reduce single-use landfill footprint." }
+    { q: "Do you supply water in customized packaging for corporate events?", a: "Yes, we offer premium custom label branding for corporate events, five-star hospitality suites, and large-scale weddings. You can select custom labels for our 250ml and 500ml bottles to align with your corporate branding." }
   ],
   support: {
     duration: "12 Months Post-Launch Support",

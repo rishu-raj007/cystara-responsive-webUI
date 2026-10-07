@@ -18,7 +18,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
 
   const slogans = [
     "Purity You Can Trust",
-    "Hygienically Sealed & Safe",
+    "Strictly Sealed & Safe",
     "Crisp, Consistent Taste",
     "Reliable Daily Hydration",
     "Balanced for Your Wellness"
@@ -296,9 +296,10 @@ export default function ScrollSequence({ cms, navigateTo }) {
         duration: 10
       }, 0);
 
-      // Scene 1: Entrance/Floating
-      tl.to("#scene-1-title", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.5 }, 0.2);
-      tl.to("#scene-1-title", { opacity: 0, y: -40, pointerEvents: "none", duration: 1 }, 2);
+      // Scene 1: Entrance/Floating - Keep pointerEvents auto until scene 1 fades out at position 3
+      tl.to("#scene-1-title", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.5 }, 0);
+      tl.to("#scene-1-title", { opacity: 0, y: -40, duration: 1 }, 2);
+      tl.set("#scene-1-title", { pointerEvents: "none" }, 3);
 
       // Scene 2: Zoom Sequence
       tl.to(canvas, { scale: 1.25, duration: 2.2, ease: "sine.inOut" }, 1.8);
@@ -340,9 +341,10 @@ export default function ScrollSequence({ cms, navigateTo }) {
         duration: 10
       }, 0);
 
-      // Scene 1: Entrance/Floating
-      tl.to("#scene-1-title", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.5 }, 0.2);
-      tl.to("#scene-1-title", { opacity: 0, y: -40, pointerEvents: "none", duration: 1 }, 2);
+      // Scene 1: Entrance/Floating - Keep pointerEvents auto until scene 1 fades out at position 3
+      tl.to("#scene-1-title", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.5 }, 0);
+      tl.to("#scene-1-title", { opacity: 0, y: -40, duration: 1 }, 2);
+      tl.set("#scene-1-title", { pointerEvents: "none" }, 3);
 
       // Scene 2: Zoom Sequence (keep scale moderate on mobile)
       tl.to(canvas, { scale: 1.05, duration: 2.2, ease: "sine.inOut" }, 1.8);
@@ -443,7 +445,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
             <div className="scene-text-content">
               <div className="hero-badge-wrap">
                 <span className="hero-badge">
-                  <i className="ri-sparkling-line"></i> Purified to Perfection &bull; 100% Hygienic
+                  <i className="ri-sparkling-line"></i> Purified to Perfection
                 </span>
               </div>
               <h2 className="text-gradient">{cms.home.heroTitle}</h2>
@@ -468,7 +470,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
           <div className="scroll-scene" id="scene-2-title" style={{ opacity: 0, transform: "translateY(30px)", pointerEvents: "none" }}>
             <div className="scene-text-content">
               <h2 className="text-gradient-gold">Pure Packaged Hydration</h2>
-              <p>Carefully purified through a multi-stage filtration process to ensure consistent taste, hygiene, and safe everyday hydration.</p>
+              <p>Carefully purified through a multi-stage filtration process to ensure consistent taste, purity, and safe everyday hydration.</p>
             </div>
           </div>
 
@@ -500,7 +502,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
                 </div>
                 <div className="scene-stat-item gold-border">
                   <h4>UV Sterilized</h4>
-                  <p>Advanced hygienic processing</p>
+                  <p>Advanced sterile processing</p>
                 </div>
               </div>
             </div>

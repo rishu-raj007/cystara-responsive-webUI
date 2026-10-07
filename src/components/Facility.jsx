@@ -86,7 +86,7 @@ export default function Facility({ cms, navigateTo }) {
               </p>
 
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                GST registered and home to the very first packaged drinking water plant in Dhanbad, running seamlessly for over 18 years. Our advanced facility adheres strictly to the highest standards of hygiene and filtration safety.
+                GST registered and home to the very first packaged drinking water plant in Dhanbad, running seamlessly for over 18 years. Our advanced facility adheres strictly to the highest standards of filtration safety and quality.
               </p>
 
               <div style={{
