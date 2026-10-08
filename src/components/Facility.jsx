@@ -5,15 +5,15 @@ export default function Facility({ cms, navigateTo }) {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="products-hero" style={{ height: "35vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div className="container" style={{ padding: "0 2rem", textAlign: "center" }}>
+      <section className="products-hero">
+        <div className="container" style={{ padding: "0 1.5rem", textAlign: "center" }}>
           <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "0.8rem" }}>
             State-Of-The-Art Operations
           </div>
-          <h1 style={{ fontSize: "3.5rem", marginBottom: "0.5rem" }} className="text-gradient">
+          <h1 className="text-gradient">
             Our Manufacturing Facility
           </h1>
-          <p style={{ maxWidth: "600px", margin: "0.5rem auto 0", color: "var(--color-text-muted)", fontSize: "1.1rem", fontWeight: 300 }}>
+          <p style={{ maxWidth: "600px", margin: "0.5rem auto 0", color: "var(--color-text-muted)", fontWeight: 300 }}>
             Purity and precision bottled at the source under certified, state-of-the-art cleanroom standards.
           </p>
         </div>

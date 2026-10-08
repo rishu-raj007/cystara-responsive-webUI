@@ -12,11 +12,11 @@ export default function Products({ cms, navigateTo }) {
     <div>
       {/* 1. Hero */}
       <section className="products-hero">
-        <div className="container" style={{ padding: "0 2rem", textAlign: "center" }}>
+        <div className="container" style={{ padding: "0 1.5rem", textAlign: "center" }}>
           <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
             Product Catalog
           </div>
-          <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem" }} className="text-gradient">
+          <h1 className="text-gradient">
             Hydration for Every Table
           </h1>
           <p className="lead" style={{ margin: "0 auto" }}>

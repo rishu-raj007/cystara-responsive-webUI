@@ -6,14 +6,14 @@ export default function About({ cms, navigateTo }) {
     <div>
       {/* 1. Hero Title Banner */}
       <section className="about-hero">
-        <div className="container" style={{ padding: "0 2rem" }}>
+        <div className="container" style={{ padding: "0 1.5rem" }}>
           <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
             About {cms.brandName}
           </div>
-          <h1 style={{ fontSize: "4rem", marginBottom: "1.5rem" }} className="text-gradient">
+          <h1 className="text-gradient">
             Purity in Every Drop
           </h1>
-          <p style={{ maxWidth: "600px", color: "var(--color-text-muted)", fontSize: "1.2rem", fontWeight: 300 }}>
+          <p style={{ maxWidth: "600px", color: "var(--color-text-muted)", fontWeight: 300 }}>
             Dedicated to purifying, bottling, and distributing safe, high-quality packaged drinking water using modern technology.
           </p>
         </div>

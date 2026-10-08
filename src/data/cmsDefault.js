@@ -71,7 +71,6 @@ export const cmsDefault = {
   services: [
     { title: "Bulk Commercial Supply", desc: "Continuous distribution to major hotels, luxury corporate spaces, and hospitals.", icon: "ri-building-line" },
     { title: "Custom Event Branding", desc: "Bespoke label design and custom sizes for premium weddings, summits, and corporate events.", icon: "ri-vip-crown-line" },
-    { title: "Premium Home Delivery", desc: "Convenient bi-weekly and monthly subscription plans for home water jar supply.", icon: "ri-home-4-line" },
     { title: "Distributor Partnerships", desc: "Collaborate with our supply chain network for retail, supermarket, and regional supply.", icon: "ri-route-line" }
   ],
   products: [

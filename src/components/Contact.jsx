@@ -84,12 +84,12 @@ Please contact me regarding packaged drinking water requirements.`;
   return (
     <div>
       {/* Hero */}
-      <section className="products-hero" style={{ height: "30vh" }}>
-        <div className="container" style={{ padding: "0 2rem", textAlign: "center" }}>
+      <section className="products-hero">
+        <div className="container" style={{ padding: "0 1.5rem", textAlign: "center" }}>
           <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "0.8rem" }}>
             Get In Touch
           </div>
-          <h1 style={{ fontSize: "3.5rem", marginBottom: "0.5rem" }} className="text-gradient">
+          <h1 className="text-gradient">
             Contact Our Supply Desk
           </h1>
         </div>

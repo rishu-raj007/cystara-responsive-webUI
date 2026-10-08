@@ -9,24 +9,24 @@ import Facility from './components/Facility';
 
 export default function App() {
   const [cmsData, setCmsData] = useState(() => {
+    let userInquiries = cmsDefault.inquiries;
     const local = localStorage.getItem("crystaraCMS");
     if (local) {
       try {
         const parsed = JSON.parse(local);
-        // Synchronize all static details with cmsDefault, keeping user inquiries
-        const synchronized = {
-          ...cmsDefault,
-          inquiries: parsed.inquiries || cmsDefault.inquiries
-        };
-        localStorage.setItem("crystaraCMS", JSON.stringify(synchronized));
-        return synchronized;
+        if (parsed && Array.isArray(parsed.inquiries)) {
+          userInquiries = parsed.inquiries;
+        }
       } catch (e) {
         console.error("Failed to parse CMS data", e);
       }
     }
-    // Fallback and initialize
-    localStorage.setItem("crystaraCMS", JSON.stringify(cmsDefault));
-    return cmsDefault;
+    const synchronized = {
+      ...cmsDefault,
+      inquiries: userInquiries
+    };
+    localStorage.setItem("crystaraCMS", JSON.stringify(synchronized));
+    return synchronized;
   });
 
   const [activePage, setActivePage] = useState(() => {
