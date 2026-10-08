@@ -44,7 +44,7 @@ export const cmsDefault = {
     vision: "To be the most trusted and reliable brand for pure packaged drinking water, recognized for exceptional quality, purity, and environmental responsibility.",
     coreValues: [
       { title: "Absolute Purity", desc: "Pure, clean, and processed through strict multi-stage filtration to eliminate impurities." },
-      { title: "Sustainability First", desc: "Plastic-negative operations. We collect and recycle twice the plastic weight we distribute." },
+      { title: "Environmental Responsibility", desc: "Eco-conscious operations and responsible water management across our bottling facilities." },
       { title: "Advanced Purification", desc: "Fully automated, touch-free bottling using state-of-the-art filtration and UV sterilization." },
       { title: "Empowering Local Communities", desc: "Supporting local areas with employment and clean, sustainable practices." }
     ],

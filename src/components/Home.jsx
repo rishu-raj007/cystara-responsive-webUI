@@ -206,30 +206,6 @@ Please contact me regarding packaged drinking water requirements.`;
         </div>
       </section>
 
-      {/* 7. Trust Indicators */}
-      <section className="trust-indicators" style={{ position: "relative", zIndex: 10 }}>
-        <div className="container">
-          <div className="trust-flex">
-            <div className="trust-item">
-              <h4>10+</h4>
-              <p>Years of Quality Excellence</p>
-            </div>
-            <div className="trust-item">
-              <h4>25k+</h4>
-              <p>Satisfied Customers</p>
-            </div>
-            <div className="trust-item">
-              <h4>100%</h4>
-              <p>Quality Assured</p>
-            </div>
-            <div className="trust-item">
-              <h4>4+</h4>
-              <p>Quality Certifications</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 8. Lead Capture Section */}
       <section className="section-padding" style={{ backgroundColor: "var(--color-dark-bg)", position: "relative", zIndex: 10 }}>
         <div className="container">

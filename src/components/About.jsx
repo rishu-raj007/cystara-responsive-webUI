@@ -62,8 +62,8 @@ export default function About({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Guiding Principles
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Core Values</h2>
-            <p className="lead">The foundational principles governing our operations, stewardship, and supply lines.</p>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Core Values</h2>
+            <p className="lead">The foundational principles governing our operations, quality standards, and supply lines.</p>
           </div>
 
           <div className="usp-grid">
@@ -149,22 +149,6 @@ export default function About({ cms, navigateTo }) {
                 <p>{c.body}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Sustainability Commitments */}
-      <section className="section-padding" style={{ backgroundColor: "var(--color-dark-bg)" }}>
-        <div className="container">
-          <div className="cta-banner">
-            <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1.5rem" }}>
-              Ecological Stewardship
-            </div>
-            <h2 className="text-gradient">200% Plastic Neutrality</h2>
-            <p style={{ maxWidth: "800px", margin: "0 auto 3rem", color: "var(--color-text-muted)", fontSize: "1.1rem", fontWeight: 300, lineHeight: "1.7" }}>
-              {cms.about.sustainability}
-            </p>
-            <button onClick={() => navigateTo("contact")} className="btn btn-primary">Partner With Us</button>
           </div>
         </div>
       </section>
