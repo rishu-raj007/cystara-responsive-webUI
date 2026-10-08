@@ -84,10 +84,10 @@ Please contact me regarding packaged drinking water requirements.`;
               <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
                 Advanced Purification
               </div>
-              <h2 style={{ fontSize: "3.5rem", lineLight: "1.1", marginBottom: "2rem" }} className="text-gradient">
+              <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>
                 {cms.home.companyIntroTitle}
               </h2>
-              <p style={{ fontSize: "1.1rem", lineLight: "1.8", color: "var(--color-text-muted)", fontWeight: 300 }}>
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.8", color: "var(--color-text-muted)", fontWeight: 300 }}>
                 {cms.home.companyIntroText}
               </p>
               <button onClick={() => navigateTo("about")} className="btn btn-outline" style={{ marginTop: "2rem" }}>
@@ -112,7 +112,7 @@ Please contact me regarding packaged drinking water requirements.`;
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Unique Selling Points
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Purity in Every Drop</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Purity in Every Drop</h2>
             <p className="lead">Why Crystara is the trusted hydration choice for homes, offices, travel, and premium venues.</p>
           </div>
           
@@ -137,7 +137,7 @@ Please contact me regarding packaged drinking water requirements.`;
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Our Distribution Network
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Bespoke Hydration Services</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Bespoke Hydration Services</h2>
             <p className="lead">We provide seamless mineral water logistics to high-end venues, luxury weddings, residences, and corporate centers.</p>
           </div>
           
@@ -160,7 +160,7 @@ Please contact me regarding packaged drinking water requirements.`;
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Tailored Execution
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Industries We Elevate</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Industries We Elevate</h2>
             <p className="lead">Sustaining premium quality standards across diverse environments.</p>
           </div>
           
@@ -187,7 +187,7 @@ Please contact me regarding packaged drinking water requirements.`;
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Client Reviews
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Endorsed by Excellence</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Endorsed by Excellence</h2>
             <p className="lead">Hear from elite F&B directors, wellness experts, and retail partners.</p>
           </div>
           

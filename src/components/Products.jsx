@@ -87,7 +87,7 @@ export default function Products({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Side-By-Side
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Product Comparison</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Product Comparison</h2>
             <p className="lead">Select the perfect capacity to fit your daily lifestyle or commercial operation.</p>
           </div>
 
@@ -147,7 +147,7 @@ export default function Products({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Corporate & Retail
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Service Offerings</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Service Offerings</h2>
             <p className="lead">Tailored delivery contracts for retail networks, hotels, weddings, and homes.</p>
           </div>
 
@@ -170,7 +170,7 @@ export default function Products({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Common Queries
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Frequently Asked Questions</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Frequently Asked Questions</h2>
             <p className="lead">Get details on purification process, quality standards, custom label branding, and logistics.</p>
           </div>
 

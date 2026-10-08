@@ -49,10 +49,10 @@ export const cmsDefault = {
       { title: "Empowering Local Communities", desc: "Supporting local areas with employment and clean, sustainable practices." }
     ],
     process: [
-      { step: "01", title: "Multi-Stage Pre-Filtration", desc: "Water passes through multi-grade sand and carbon filters to remove sediment, chlorine, and organic compounds." },
-      { step: "02", title: "Reverse Osmosis (RO)", desc: "Filtered through high-efficiency reverse osmosis membranes to eliminate dissolved solids and impurities." },
-      { step: "03", title: "UV & Ozone Sterilization", desc: "Advanced dual sterilization using UV sterilizers and ozone barriers to ensure absolute biological safety." },
-      { step: "04", title: "Automated Bottling", desc: "Fully automated bottle blowing, rinsing, filling, and sealing under strict sterile conditions." }
+      { step: "01", title: "Charcoal Filtration", desc: "Water passes through high-grade activated charcoal filters to remove sediment, chlorine, organic compounds, and odor." },
+      { step: "02", title: "Reverse Osmosis", desc: "Filtered through high-efficiency reverse osmosis membranes to eliminate dissolved solids and impurities." },
+      { step: "03", title: "UV Treated", desc: "Advanced ultraviolet (UV) sterilization treatment to eliminate bacteria, pathogens, and biological contaminants." },
+      { step: "04", title: "Sand Filtration", desc: "Passed through precision multi-layer sand filtration beds to eliminate turbidity and fine particulate matter." }
     ],
     gallery: [
       { title: "Purification Center", desc: "Our state-of-the-art purification and testing center.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },

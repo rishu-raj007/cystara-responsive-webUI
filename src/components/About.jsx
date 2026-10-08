@@ -87,7 +87,7 @@ export default function About({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Technical Operations
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Our Manufacturing Process</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Our Manufacturing Process</h2>
             <p className="lead">How we purify, filter, test, and bottle our drinking water untouched by human hands.</p>
           </div>
 
@@ -112,7 +112,7 @@ export default function About({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Visual Showcase
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Behind-The-Scenes</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Behind-The-Scenes</h2>
             <p className="lead">A glance inside our clean-room packaging facilities and purification systems.</p>
           </div>
 
@@ -137,7 +137,7 @@ export default function About({ cms, navigateTo }) {
             <div style={{ fontSize: "0.85rem", textTransform: "uppercase", color: "var(--color-water-primary)", letterSpacing: "0.2em", fontWeight: 600, marginBottom: "1rem" }}>
               Compliance Standards
             </div>
-            <h2 style={{ fontSize: "3.5rem", marginBottom: "1.5rem" }} className="text-gradient">Quality Certifications</h2>
+            <h2 className="text-gradient" style={{ marginBottom: "1.5rem" }}>Quality Certifications</h2>
             <p className="lead">{cms.brandName} complies with all major food safety and manufacturing regulations globally.</p>
           </div>
 
