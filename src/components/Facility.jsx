@@ -81,9 +81,28 @@ export default function Facility({ cms, navigateTo }) {
                 margin: '1.5rem auto'
               }}></div>
 
-              <p style={{ fontSize: '1.3rem', color: '#fff', fontWeight: 400, marginBottom: '1.5rem', fontFamily: 'var(--font-body)' }}>
+              <p style={{ fontSize: '1.3rem', color: '#fff', fontWeight: 400, marginBottom: '0.8rem', fontFamily: 'var(--font-body)' }}>
                 FSSAI, BIS &amp; ISI Certified Operations
               </p>
+
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                background: 'rgba(14, 165, 233, 0.07)',
+                border: '1px solid rgba(14, 165, 233, 0.25)',
+                borderRadius: '8px',
+                padding: '0.45rem 1.1rem',
+                marginBottom: '1.5rem'
+              }}>
+                <i className="ri-verified-badge-fill" style={{ color: 'var(--color-water-primary)', fontSize: '1rem' }}></i>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontWeight: 400, letterSpacing: '0.03em' }}>
+                  FSSAI Lic. No.:&nbsp;
+                </span>
+                <span style={{ fontSize: '0.85rem', color: 'var(--color-water-light)', fontWeight: 600, letterSpacing: '0.08em' }}>
+                  11124016000065
+                </span>
+              </div>
 
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 GST registered and home to the very first packaged drinking water plant in Dhanbad. Our advanced facility adheres strictly to the highest standards of filtration safety and quality.
