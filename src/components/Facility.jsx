@@ -82,7 +82,7 @@ export default function Facility({ cms, navigateTo }) {
               }}></div>
 
               <p style={{ fontSize: '1.3rem', color: '#fff', fontWeight: 400, marginBottom: '0.8rem', fontFamily: 'var(--font-body)' }}>
-                FSSAI, BIS &amp; ISI Certified Operations
+                FSSAI Certified Operations
               </p>
 
               <div style={{
