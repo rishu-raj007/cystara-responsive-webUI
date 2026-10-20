@@ -115,7 +115,7 @@ Please contact me regarding packaged drinking water requirements.`;
                   <div className="detail-text">
                     <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.6rem', fontFamily: 'var(--font-body)' }}>Call Our Supply Desk</h3>
                     <p style={{ margin: 0, fontSize: '1.05rem', color: 'var(--color-text-muted)', fontWeight: 300, lineHeight: 1.6 }}>
-                      <a href="tel:+917677912567" style={{ display: 'block', color: 'var(--color-text-muted)' }} className="hover-link">+91 76779 12567</a>
+                      <a href="tel:+917903511395" style={{ display: 'block', color: 'var(--color-text-muted)' }} className="hover-link">+91 79035 11395</a>
                       <a href="tel:+917070696936" style={{ display: 'block', color: 'var(--color-text-muted)', marginTop: '4px' }} className="hover-link">+91 70706 96936</a>
                     </p>
                   </div>
