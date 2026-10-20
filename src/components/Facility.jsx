@@ -165,7 +165,7 @@ export default function Facility({ cms, navigateTo }) {
                   alignItems: 'center',
                   gap: '0.5rem'
                 }}>
-                  <i className="ri-checkbox-circle-fill" style={{ fontSize: '1.1rem' }}></i> BIS &amp; ISI Compliant
+                  <i className="ri-checkbox-circle-fill" style={{ fontSize: '1.1rem' }}></i>
                 </div>
                 <div style={{
                   background: 'rgba(14, 165, 233, 0.05)',
