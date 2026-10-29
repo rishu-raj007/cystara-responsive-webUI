@@ -12,7 +12,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
   const containerRef = useRef(null);
   const preloaderRef = useRef(null);
   const renderRef = useRef(null); // Share render handle with bg load callback
-  
+
   const [loadingPercent, setLoadingPercent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -32,7 +32,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
     return () => clearInterval(interval);
   }, []);
 
-  const frameCount = 50;
+  const frameCount = 11;
   const currentFrame = index => `/animation-frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.jpg`;
 
   // Diagnostic logger helper
@@ -174,7 +174,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
     const render = () => {
       const frameIndex = Math.round(bottleSequence.frame);
       let img = images[frameIndex];
-      
+
       // Fallback Strategy: Find the closest loaded frame
       if (!img || !img.complete || img.naturalWidth === 0) {
         let found = false;
@@ -215,29 +215,21 @@ export default function ScrollSequence({ cms, navigateTo }) {
       const canvasWidth = canvas.width;
       const canvasHeight = canvas.height;
 
-      const imgRatio = imgWidth / imgHeight;
-      const canvasRatio = canvasWidth / canvasHeight;
+      const isMobile = canvasWidth < 768;
 
-      let drawWidth, drawHeight, offsetX, offsetY;
-      let scaleFactor = 1.0;
-      if (canvasWidth < 768) {
-        scaleFactor = 0.72; // portrait-optimized scaling to prevent the bottle from being oversized
-      }
+      // Cover calculation: ensure the image always fills the canvas completely without letterbox gaps
+      const scale = Math.max(canvasWidth / imgWidth, canvasHeight / imgHeight);
+      // On mobile portrait, apply a slight zoom factor (1.08x) to crop out letterbox bars in animation frames
+      const bleedFactor = isMobile ? 1.08 : 1.0;
+      const finalScale = scale * bleedFactor;
 
-      if (canvasRatio > imgRatio) {
-        drawWidth = canvasWidth * scaleFactor;
-        drawHeight = (canvasWidth / imgRatio) * scaleFactor;
-        offsetX = (canvasWidth - drawWidth) / 2;
-        offsetY = (canvasHeight - drawHeight) / 2;
-      } else {
-        drawWidth = canvasHeight * imgRatio * scaleFactor;
-        drawHeight = canvasHeight * scaleFactor;
-        offsetX = (canvasWidth - drawWidth) / 2;
-        offsetY = (canvasHeight - drawHeight) / 2;
-      }
+      const drawWidth = imgWidth * finalScale;
+      const drawHeight = imgHeight * finalScale;
+      const offsetX = (canvasWidth - drawWidth) / 2;
+      const offsetY = (canvasHeight - drawHeight) / 2;
 
       ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-      
+
       // Log frame renders selectively
       if (frameIndex % 5 === 0) {
         logDebug(`Frame paint: #${frameIndex} | Cache: ${isFullyLoaded ? "Global" : "Loading"} | Draw size: ${Math.round(drawWidth)}x${Math.round(drawHeight)}`);
@@ -257,7 +249,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
     const handleResize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      
+
       if (width !== lastWidth || Math.abs(height - lastHeight) > 120) {
         canvas.width = width;
         canvas.height = height;
@@ -343,24 +335,21 @@ export default function ScrollSequence({ cms, navigateTo }) {
 
       // Scene 1: Entrance/Floating - Keep pointerEvents auto until scene 1 fades out at position 3
       tl.to("#scene-1-title", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.5 }, 0);
-      tl.to("#scene-1-title", { opacity: 0, y: -40, duration: 1 }, 2);
+      tl.to("#scene-1-title", { opacity: 0, y: -30, duration: 1 }, 2);
       tl.set("#scene-1-title", { pointerEvents: "none" }, 3);
 
-      // Scene 2: Zoom Sequence (keep scale moderate on mobile)
-      tl.to(canvas, { scale: 1.05, duration: 2.2, ease: "sine.inOut" }, 1.8);
-      tl.to(".backdrop-splash", { opacity: 0.25, scale: 1.2, duration: 2.2, ease: "sine.inOut" }, 1.8);
+      // Scene 2: Zoom Sequence - keep canvas full-bleed on mobile to avoid letterbox gaps
+      tl.to(".backdrop-splash", { opacity: 0.3, scale: 1.25, duration: 2.2, ease: "sine.inOut" }, 1.8);
       tl.to("#scene-2-title", { opacity: 1, y: 0, duration: 1.5 }, 2.2);
-      tl.to("#scene-2-title", { opacity: 0, y: -40, duration: 1 }, 4);
+      tl.to("#scene-2-title", { opacity: 0, y: -30, duration: 1 }, 4);
 
-      // Scene 3: Aquifer Origin (keep bottle centered behind text)
-      tl.to(canvas, { scale: 0.9, x: "0vw", duration: 2.5, ease: "power2.inOut" }, 4.2);
-      tl.to(".backdrop-splash", { x: "0vw", opacity: 0.15, duration: 2.5 }, 4.2);
+      // Scene 3: Aquifer Origin
+      tl.to(".backdrop-splash", { opacity: 0.25, duration: 2.5 }, 4.2);
       tl.to("#scene-3-content", { opacity: 1, y: 0, duration: 1.8 }, 4.8);
-      tl.to("#scene-3-content", { opacity: 0, y: -40, duration: 1 }, 7);
+      tl.to("#scene-3-content", { opacity: 0, y: -30, duration: 1 }, 7);
 
-      // Scene 4/5: Lineup emerges (keep bottle centered behind text)
-      tl.to(canvas, { x: "0vw", scale: 0.85, duration: 2.2, ease: "power2.inOut" }, 7.2);
-      tl.to(".backdrop-splash", { x: "0vw", opacity: 0.1, duration: 2.2 }, 7.2);
+      // Scene 4/5: Lineup emerges
+      tl.to(".backdrop-splash", { opacity: 0.2, duration: 2.2 }, 7.2);
       tl.to("#scene-4-content", { opacity: 1, y: 0, pointerEvents: "auto", duration: 1.8 }, 7.8);
     });
 
@@ -374,10 +363,10 @@ export default function ScrollSequence({ cms, navigateTo }) {
 
   return (
     <div ref={containerRef} className={`hero-scroll-wrapper ${isLoaded ? 'loaded' : ''}`} style={{ height: "650vh" }}>
-      
+
       {/* On-Screen Diagnostic Debug overlay */}
-      <div 
-        id="canvas-debug-overlay" 
+      <div
+        id="canvas-debug-overlay"
         style={{
           position: "fixed",
           bottom: "20px",
@@ -400,21 +389,21 @@ export default function ScrollSequence({ cms, navigateTo }) {
       >
         <div>[DEBUG] Diagnostic Console Active</div>
       </div>
-      
+
       {/* Sequence Preloader */}
-      <div 
-        ref={preloaderRef} 
+      <div
+        ref={preloaderRef}
         style={{
-          position: "fixed", 
-          top: 0, 
-          left: 0, 
-          width: "100%", 
-          height: "100%", 
-          background: "#030712", 
-          zIndex: 9999, 
-          display: "flex", 
-          flexDirection: "column", 
-          justifyContent: "center", 
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: "#030712",
+          zIndex: 9999,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center"
         }}
       >
@@ -439,7 +428,7 @@ export default function ScrollSequence({ cms, navigateTo }) {
 
         {/* Content Overlays */}
         <div className="canvas-overlay-content">
-          
+
           {/* Scene 1: Slogan */}
           <div className="scroll-scene" id="scene-1-title" style={{ opacity: 1, transform: "translateY(0px)", pointerEvents: "auto" }}>
             <div className="scene-text-content">
@@ -475,12 +464,12 @@ export default function ScrollSequence({ cms, navigateTo }) {
           </div>
 
           {/* Scene 3: Geological Filter */}
-          <div 
-            className="scroll-scene scene-grid-3" 
-            id="scene-3-content" 
-            style={{ 
-              opacity: 0, 
-              transform: "translateY(30px)", 
+          <div
+            className="scroll-scene scene-grid-3"
+            id="scene-3-content"
+            style={{
+              opacity: 0,
+              transform: "translateY(30px)",
               pointerEvents: "none"
             }}
           >
@@ -509,12 +498,12 @@ export default function ScrollSequence({ cms, navigateTo }) {
           </div>
 
           {/* Scene 4: Showcase Lineup */}
-          <div 
-            className="scroll-scene scene-grid-4" 
-            id="scene-4-content" 
-            style={{ 
-              opacity: 0, 
-              transform: "translateY(30px)", 
+          <div
+            className="scroll-scene scene-grid-4"
+            id="scene-4-content"
+            style={{
+              opacity: 0,
+              transform: "translateY(30px)",
               pointerEvents: "none"
             }}
           >

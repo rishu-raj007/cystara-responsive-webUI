@@ -393,10 +393,10 @@ p.lead {
   .canvas-container::after {
     background: linear-gradient(
       to bottom,
-      rgba(3, 7, 18, 0.75) 0%,
-      rgba(3, 7, 18, 0.65) 40%,
-      rgba(3, 7, 18, 0.7) 60%,
-      rgba(3, 7, 18, 0.95) 100%
+      rgba(3, 7, 18, 0.65) 0%,
+      rgba(3, 7, 18, 0.2) 30%,
+      rgba(3, 7, 18, 0.2) 70%,
+      rgba(3, 7, 18, 0.8) 100%
     );
   }
 }
@@ -601,12 +601,13 @@ p.lead {
   }
 
   .scene-text-content {
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    padding: 1rem !important;
-    box-shadow: none !important;
+    background: rgba(3, 7, 18, 0.74) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(14, 165, 233, 0.24) !important;
+    border-radius: 20px !important;
+    padding: 1.4rem 1.2rem !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(14, 165, 233, 0.12) !important;
     text-align: center !important;
     align-items: center !important;
     max-width: 440px !important;
@@ -618,13 +619,15 @@ p.lead {
 
   .scene-text-content h2 {
     text-align: center !important;
-    font-size: clamp(1.5rem, 5vw, 2.1rem) !important;
+    font-size: clamp(1.4rem, 4.8vw, 1.95rem) !important;
+    line-height: 1.25 !important;
   }
 
   .scene-text-content p {
     text-align: center !important;
-    font-size: clamp(0.88rem, 3.2vw, 0.98rem) !important;
-    color: var(--color-text-muted) !important;
+    font-size: clamp(0.85rem, 3vw, 0.95rem) !important;
+    line-height: 1.55 !important;
+    color: #cbd5e1 !important;
   }
 
   .scene-stats-flex {
@@ -2085,10 +2088,12 @@ textarea.form-control {
 
 @media (max-width: 576px) {
   .hero-brand-values {
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.1rem;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 }
 
