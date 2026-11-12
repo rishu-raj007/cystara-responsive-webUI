@@ -1,77 +1,203 @@
 // src/data/cmsDefault.js
 export const cmsDefault = {
   brandName: "Crystara",
-  tagline: "Purity and Quality You Can Trust",
+  tagline: "Purity and Quality You Can Trust ",
   supportDuration: "12 Months Comprehensive Support",
   contact: {
     phone: "+91 76779 12567",
     phone2: "+91 70706 96936",
     whatsapp: "+91 70706 96936",
     email: "customercare@crystarawater.com",
-    address: "C10, Nalanda Green City\nBaliyapur Hirak Road, Near JP Hospital\nDhanbad, Jharkhand - 826005",
-    gmapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.109849547515!2d86.4597403!3d23.8146923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f10befdfb3dfbf%3A0x8db57d34197e88f!2sHirak%20Rd%2C%20Dhanbad%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1718600000000!5m2!1sen!2sin",
-    hours: "Mon - Sat: 9:00 AM - 7:00 PM, Sunday: Closed"
+    address:
+      "C10, Nalanda Green City\nBaliyapur Hirak Road, Near JP Hospital\nDhanbad, Jharkhand - 826005",
+    gmapsEmbed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.109849547515!2d86.4597403!3d23.8146923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f10befdfb3dfbf%3A0x8db57d34197e88f!2sHirak%20Rd%2C%20Dhanbad%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1718600000000!5m2!1sen!2sin",
+    hours: "Mon - Sat: 9:00 AM - 7:00 PM, Sunday: Closed",
   },
   socials: {
     instagram: "https://instagram.com/crystara",
     facebook: "https://facebook.com/crystara",
-    linkedin: "https://linkedin.com/company/crystara"
+    linkedin: "https://linkedin.com/company/crystara",
   },
   home: {
     heroTitle: "Pure Packaged Drinking Water for Everyday Hydration",
-    heroSubtitle: "Experience pure, safe, and refreshing drinking water processed through multi-stage purification technology for consistent taste.",
+    heroSubtitle:
+      "Experience pure, safe, and refreshing drinking water processed through multi-stage purification technology for consistent taste.",
     companyIntroTitle: "Advanced Purification, Unmatched Purity",
-    companyIntroText: "Crystara is premium packaged drinking water, purified using advanced multi-stage filtration and state-of-the-art purification technology. Our water undergoes rigorous quality checks and sterile clean-room bottling to ensure maximum purity and safety. Formulated for a crisp, clean, and consistent taste, Crystara provides reliable hydration for your everyday needs, whether at home, at work, or on the go.",
+    companyIntroText:
+      "Crystara is premium packaged drinking water, purified using advanced multi-stage filtration and state-of-the-art purification technology. Our water undergoes rigorous quality checks and sterile clean-room bottling to ensure maximum purity and safety. Formulated for a crisp, clean, and consistent taste, Crystara provides reliable hydration for your everyday needs, whether at home, at work, or on the go.",
     usps: [
-      { id: "usp1", title: "Multi-Stage Purified", desc: "Processed using advanced multi-stage filtration and reverse osmosis to remove impurities.", icon: "ri-water-flash-line" },
-      { id: "usp2", title: "Balanced & Fresh", desc: "Carefully treated to ensure consistent quality, refreshing taste, and perfect daily hydration.", icon: "ri-heart-pulse-line" },
-      { id: "usp3", title: "Quality Assured", desc: "Tested rigorously to comply with strict national and international safety standards.", icon: "ri-sparkling-2-line" },
-      { id: "usp4", title: "BPA-Free & Recyclable", desc: "Bottled in premium food-grade BPA-free materials that are 100% recyclable.", icon: "ri-recycle-line" },
-      { id: "usp5", title: "Reliable Supply", desc: "Direct from our purification hubs to your home, office, event, or business.", icon: "ri-truck-line" }
+      {
+        id: "usp1",
+        title: "Multi-Stage Purified",
+        desc: "Processed using advanced multi-stage filtration and reverse osmosis to remove impurities.",
+        icon: "ri-water-flash-line",
+      },
+      {
+        id: "usp2",
+        title: "Balanced & Fresh",
+        desc: "Carefully treated to ensure consistent quality, refreshing taste, and perfect daily hydration.",
+        icon: "ri-heart-pulse-line",
+      },
+      {
+        id: "usp3",
+        title: "Quality Assured",
+        desc: "Tested rigorously to comply with strict national and international safety standards.",
+        icon: "ri-sparkling-2-line",
+      },
+      {
+        id: "usp4",
+        title: "BPA-Free & Recyclable",
+        desc: "Bottled in premium food-grade BPA-free materials that are 100% recyclable.",
+        icon: "ri-recycle-line",
+      },
+      {
+        id: "usp5",
+        title: "Reliable Supply",
+        desc: "Direct from our purification hubs to your home, office, event, or business.",
+        icon: "ri-truck-line",
+      },
     ],
     industries: [
-      { id: "ind1", name: "Premium Homes", desc: "Purest daily drinking water for health-conscious families.", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" },
-      { id: "ind2", name: "Corporate Offices", desc: "Enhance wellness, focus, and energy in high-performing workrooms.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80" },
-      { id: "ind3", name: "Luxury Hotels", desc: "Exquisite presentation and taste for discerning international guests.", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" },
-      { id: "ind4", name: "Fine Dining", desc: "A neutral, clean pairing that enhances gourmet food and wines.", img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80" },
-      { id: "ind5", name: "Elite Events", desc: "Sleek, customizable luxury branding for weddings and premium summits.", img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=80" }
-    ]
+      {
+        id: "ind1",
+        name: "Premium Homes",
+        desc: "Purest daily drinking water for health-conscious families.",
+        img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80",
+      },
+      {
+        id: "ind2",
+        name: "Corporate Offices",
+        desc: "Enhance wellness, focus, and energy in high-performing workrooms.",
+        img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80",
+      },
+      {
+        id: "ind3",
+        name: "Luxury Hotels",
+        desc: "Exquisite presentation and taste for discerning international guests.",
+        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+      },
+      {
+        id: "ind4",
+        name: "Fine Dining",
+        desc: "A neutral, clean pairing that enhances gourmet food and wines.",
+        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80",
+      },
+      {
+        id: "ind5",
+        name: "Elite Events",
+        desc: "Sleek, customizable luxury branding for weddings and premium summits.",
+        img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=400&q=80",
+      },
+    ],
   },
   about: {
     storyTitle: "Dedicated to Pure and Safe Hydration",
-    storyText: "Crystara was founded on a commitment to deliver the highest standard of safe and pure packaged drinking water for everyday living. Our brand focuses on advanced multi-stage filtration, leveraging modern purification technology and stringent quality control. Every bottle of Crystara is packaged in our state-of-the-art facility, ensuring a crisp, consistent taste and reliable hydration that families and businesses can trust.",
-    mission: "To provide safe, refreshing, and reliable packaged drinking water through advanced purification, clean manufacturing practices, and sustainable bottling solutions.",
-    vision: "To be the most trusted and reliable brand for pure packaged drinking water, recognized for exceptional quality, purity, and environmental responsibility.",
+    storyText:
+      "Crystara was founded on a commitment to deliver the highest standard of safe and pure packaged drinking water for everyday living. Our brand focuses on advanced multi-stage filtration, leveraging modern purification technology and stringent quality control. Every bottle of Crystara is packaged in our state-of-the-art facility, ensuring a crisp, consistent taste and reliable hydration that families and businesses can trust.",
+    mission:
+      "To provide safe, refreshing, and reliable packaged drinking water through advanced purification, clean manufacturing practices, and sustainable bottling solutions.",
+    vision:
+      "To be the most trusted and reliable brand for pure packaged drinking water, recognized for exceptional quality, purity, and environmental responsibility.",
     coreValues: [
-      { title: "Absolute Purity", desc: "Pure, clean, and processed through strict multi-stage filtration to eliminate impurities." },
-      { title: "Environmental Responsibility", desc: "Eco-conscious operations and responsible water management across our bottling facilities." },
-      { title: "Advanced Purification", desc: "Fully automated, touch-free bottling using state-of-the-art filtration and UV sterilization." },
-      { title: "Empowering Local Communities", desc: "Supporting local areas with employment and clean, sustainable practices." }
+      {
+        title: "Absolute Purity",
+        desc: "Pure, clean, and processed through strict multi-stage filtration to eliminate impurities.",
+      },
+      {
+        title: "Environmental Responsibility",
+        desc: "Eco-conscious operations and responsible water management across our bottling facilities.",
+      },
+      {
+        title: "Advanced Purification",
+        desc: "Fully automated, touch-free bottling using state-of-the-art filtration and UV sterilization.",
+      },
+      {
+        title: "Empowering Local Communities",
+        desc: "Supporting local areas with employment and clean, sustainable practices.",
+      },
     ],
     process: [
-      { step: "01", title: "Charcoal Filtration", desc: "Water passes through high-grade activated charcoal filters to remove sediment, chlorine, organic compounds, and odor." },
-      { step: "02", title: "Reverse Osmosis", desc: "Filtered through high-efficiency reverse osmosis membranes to eliminate dissolved solids and impurities." },
-      { step: "03", title: "UV Treated", desc: "Advanced ultraviolet (UV) sterilization treatment to eliminate bacteria, pathogens, and biological contaminants." },
-      { step: "04", title: "Sand Filtration", desc: "Passed through precision multi-layer sand filtration beds to eliminate turbidity and fine particulate matter." }
+      {
+        step: "01",
+        title: "Charcoal Filtration",
+        desc: "Water passes through high-grade activated charcoal filters to remove sediment, chlorine, organic compounds, and odor.",
+      },
+      {
+        step: "02",
+        title: "Reverse Osmosis",
+        desc: "Filtered through high-efficiency reverse osmosis membranes to eliminate dissolved solids and impurities.",
+      },
+      {
+        step: "03",
+        title: "UV Treated",
+        desc: "Advanced ultraviolet (UV) sterilization treatment to eliminate bacteria, pathogens, and biological contaminants.",
+      },
+      {
+        step: "04",
+        title: "Sand Filtration",
+        desc: "Passed through precision multi-layer sand filtration beds to eliminate turbidity and fine particulate matter.",
+      },
     ],
     gallery: [
-      { title: "Purification Center", desc: "Our state-of-the-art purification and testing center.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
-      { title: "Quality Control Lab", desc: "Rigorous monitoring and validation at each filtration stage.", img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" },
-      { title: "German Sterile Pipeline", desc: "Stainless steel flow monitoring systems.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
-      { title: "Class-100 Sterile Room", desc: "Touch-free high-speed filling line.", img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" }
+      {
+        title: "Purification Center",
+        desc: "Our state-of-the-art purification and testing center.",
+        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Quality Control Lab",
+        desc: "Rigorous monitoring and validation at each filtration stage.",
+        img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "German Sterile Pipeline",
+        desc: "Stainless steel flow monitoring systems.",
+        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+      },
+      {
+        title: "Class-100 Sterile Room",
+        desc: "Touch-free high-speed filling line.",
+        img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+      },
     ],
     certifications: [
-      { name: "FSSAI Certified", body: "Food Safety and Standards Authority of India (Lic: 165961201X)" },
-      { name: "ISO 22000:2018", body: "Food Safety Management System Standards Accreditation" },
-      { name: "BIS Approved", body: "Bureau of Indian Standards IS-15443 Quality Compliance" },
-      { name: "WHO GMP compliant", body: "Good Manufacturing Practices Standard Certificate" }
+      {
+        name: "FSSAI Certified",
+        body: "Food Safety and Standards Authority of India (Lic: 165961201X)",
+      },
+      {
+        name: "ISO 22000:2018",
+        body: "Food Safety Management System Standards Accreditation",
+      },
+      {
+        name: "BIS Approved",
+        body: "Bureau of Indian Standards IS-15443 Quality Compliance",
+      },
+      {
+        name: "WHO GMP compliant",
+        body: "Good Manufacturing Practices Standard Certificate",
+      },
     ],
-    sustainability: "We are committed to absolute environmental harmony. Our bottling facility operates using energy-efficient systems. Through active collaboration with community organizations, we manage and optimize water usage, ensuring our operations leave the water table stable. We are certified Plastic-Neutral: for every single bottle we produce, we retrieve and recycle 200% of its plastic weight in collaboration with local waste initiatives."
+    sustainability:
+      "We are committed to absolute environmental harmony. Our bottling facility operates using energy-efficient systems. Through active collaboration with community organizations, we manage and optimize water usage, ensuring our operations leave the water table stable. We are certified Plastic-Neutral: for every single bottle we produce, we retrieve and recycle 200% of its plastic weight in collaboration with local waste initiatives.",
   },
   services: [
-    { title: "Bulk Commercial Supply", desc: "Continuous distribution to major hotels, luxury corporate spaces, and hospitals.", icon: "ri-building-line" },
-    { title: "Custom Event Branding", desc: "Bespoke label design and custom sizes for premium weddings, summits, and corporate events.", icon: "ri-vip-crown-line" },
-    { title: "Distributor Partnerships", desc: "Collaborate with our supply chain network for retail, supermarket, and regional supply.", icon: "ri-route-line" }
+    {
+      title: "Bulk Commercial Supply",
+      desc: "Continuous distribution to major hotels, luxury corporate spaces, and hospitals.",
+      icon: "ri-building-line",
+    },
+    {
+      title: "Custom Event Branding",
+      desc: "Bespoke label design and custom sizes for premium weddings, summits, and corporate events.",
+      icon: "ri-vip-crown-line",
+    },
+    {
+      title: "Distributor Partnerships",
+      desc: "Collaborate with our supply chain network for retail, supermarket, and regional supply.",
+      icon: "ri-route-line",
+    },
   ],
   products: [
     {
@@ -80,9 +206,13 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹10",
       desc: "Compact hydration. Ideal for dining tables, corporate boardrooms, conferences, and quick travel.",
-      specs: { "Volume": "250 ml", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
+      specs: {
+        Volume: "250 ml",
+        Packaging: "Case of 24 Bottles",
+        TDS: "80-120 ppm",
+      },
       img: "/crystara-250ml.jpg",
-      comingSoon: true
+      comingSoon: true,
     },
     {
       id: "p500",
@@ -90,9 +220,13 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹15",
       desc: "Convenient everyday size. Ideal for personal hydration, commuting, and active lifestyles.",
-      specs: { "Volume": "500 ml", "Packaging": "Case of 24 Bottles", "TDS": "80-120 ppm" },
+      specs: {
+        Volume: "500 ml",
+        Packaging: "Case of 24 Bottles",
+        TDS: "80-120 ppm",
+      },
       img: "/crystara-500ml.jpg",
-      comingSoon: true
+      comingSoon: true,
     },
     {
       id: "p1l",
@@ -100,20 +234,48 @@ export const cmsDefault = {
       category: "Premium Glass / PET",
       price: "₹20",
       desc: "Our standard size. Made for workouts, office desks, travel, and reliable daily hydration.",
-      specs: { "Volume": "1.0 Litre", "Packaging": "Case of 12 Bottles", "TDS": "80-120 ppm" },
+      specs: {
+        Volume: "1.0 Litre",
+        Packaging: "Case of 12 Bottles",
+        TDS: "80-120 ppm",
+      },
       img: "/crystara-1l.png",
-      comingSoon: false
-    }
+      comingSoon: false,
+    },
   ],
   testimonials: [
-    { id: "t1", name: "Aarav Sharma", role: "F&B Director, The Imperial Hotel", text: "Crystara has elevated our guest dining experience. The bottle design is clean and professional, and the taste is remarkably pure, consistent, and refreshing." },
-    { id: "t2", name: "Nisha Mehta", role: "Founder, Zenith Wellness", text: "I advise my clients to stay hydrated with safe, pure water. Crystara delivers consistent purity and a clean, refreshing taste. It is our official hydration partner." },
-    { id: "t3", name: "Vikram Rathore", role: "Premium Retailer, Royal Beverages", text: "Our clients specifically prefer Crystara. The focus on multi-stage purification and quality assurance resonates with them, and the delivery logistics are flawless." }
+    {
+      id: "t1",
+      name: "Aarav Sharma",
+      role: "F&B Director, The Imperial Hotel",
+      text: "Crystara has elevated our guest dining experience. The bottle design is clean and professional, and the taste is remarkably pure, consistent, and refreshing.",
+    },
+    {
+      id: "t2",
+      name: "Nisha Mehta",
+      role: "Founder, Zenith Wellness",
+      text: "I advise my clients to stay hydrated with safe, pure water. Crystara delivers consistent purity and a clean, refreshing taste. It is our official hydration partner.",
+    },
+    {
+      id: "t3",
+      name: "Vikram Rathore",
+      role: "Premium Retailer, Royal Beverages",
+      text: "Our clients specifically prefer Crystara. The focus on multi-stage purification and quality assurance resonates with them, and the delivery logistics are flawless.",
+    },
   ],
   faqs: [
-    { q: "What makes Crystara packaged drinking water different?", a: "Crystara is high-quality packaged drinking water purified using advanced multi-stage filtration, reverse osmosis (RO), and UV sterilization. We focus on consistent taste, purity, and safety, ensuring every bottle is safe and refreshing for everyday hydration." },
-    { q: "What is the pH level of Crystara water?", a: "Crystara drinking water is processed to maintain a balanced, neutral pH level, providing a clean, refreshing taste that is easy on the palate and perfect for daily consumption." },
-    { q: "Do you supply water in customized packaging for corporate events?", a: "Yes, we offer premium custom label branding for corporate events, five-star hospitality suites, and large-scale weddings. You can select custom labels for our 250ml and 500ml bottles to align with your corporate branding." }
+    {
+      q: "What makes Crystara packaged drinking water different?",
+      a: "Crystara is high-quality packaged drinking water purified using advanced multi-stage filtration, reverse osmosis (RO), and UV sterilization. We focus on consistent taste, purity, and safety, ensuring every bottle is safe and refreshing for everyday hydration.",
+    },
+    {
+      q: "What is the pH level of Crystara water?",
+      a: "Crystara drinking water is processed to maintain a balanced, neutral pH level, providing a clean, refreshing taste that is easy on the palate and perfect for daily consumption.",
+    },
+    {
+      q: "Do you supply water in customized packaging for corporate events?",
+      a: "Yes, we offer premium custom label branding for corporate events, five-star hospitality suites, and large-scale weddings. You can select custom labels for our 250ml and 500ml bottles to align with your corporate branding.",
+    },
   ],
   support: {
     duration: "12 Months Post-Launch Support",
@@ -122,11 +284,29 @@ export const cmsDefault = {
       "Monthly performance optimizations and Core Web Vitals checks.",
       "Critical security patches, updates to external animation plugins (GSAP/ScrollTrigger).",
       "Minor text adjustments, banner swaps, and seasonal pricing changes (up to 3 requests per month).",
-      "Auto-backup configurations and database export/import assistance."
-    ]
+      "Auto-backup configurations and database export/import assistance.",
+    ],
   },
   inquiries: [
-    { id: 1, name: "Suresh Pillai", phone: "+91 98450 12345", email: "suresh@lila-resort.com", business: "The Lila Resorts", message: "Requesting pricing list for bulk weekly deliveries of 1L bottles (approx 100 cases per week).", date: "2026-06-09" },
-    { id: 2, name: "Ananya Roy", phone: "+91 91234 56789", email: "ananya.r@designcorp.in", business: "DesignCorp Interiors", message: "Interested in corporate subscription for our three office floors in Delhi NCR. Would like 20L jars.", date: "2026-06-10" }
-  ]
+    {
+      id: 1,
+      name: "Suresh Pillai",
+      phone: "+91 98450 12345",
+      email: "suresh@lila-resort.com",
+      business: "The Lila Resorts",
+      message:
+        "Requesting pricing list for bulk weekly deliveries of 1L bottles (approx 100 cases per week).",
+      date: "2026-06-09",
+    },
+    {
+      id: 2,
+      name: "Ananya Roy",
+      phone: "+91 91234 56789",
+      email: "ananya.r@designcorp.in",
+      business: "DesignCorp Interiors",
+      message:
+        "Interested in corporate subscription for our three office floors in Delhi NCR. Would like 20L jars.",
+      date: "2026-06-10",
+    },
+  ],
 };
