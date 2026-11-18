@@ -1,7 +1,7 @@
 // src/data/cmsDefault.js
 export const cmsDefault = {
   brandName: "Crystara",
-  tagline: "Purity and Quality You Can Trust ",
+  tagline: "Purity and Quality You Can Trust",
   supportDuration: "12 Months Comprehensive Support",
   contact: {
     phone: "+91 79035 11395",
