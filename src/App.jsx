@@ -107,7 +107,7 @@ export default function App() {
     window.history.pushState({ page }, "", path);
   };
 
-  const phoneRaw = (cmsData.contact?.phone || "+91 76779 12567").replace(/\s+/g, "");
+  const phoneRaw = (cmsData.contact?.phone || "+91 79035 11395").replace(/\s+/g, "");
   const waRaw = (cmsData.contact?.whatsapp || "+91 70706 96936").replace(/[^0-9]/g, "");
 
   return (

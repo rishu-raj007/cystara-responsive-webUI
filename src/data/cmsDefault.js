@@ -4,7 +4,7 @@ export const cmsDefault = {
   tagline: "Purity and Quality You Can Trust ",
   supportDuration: "12 Months Comprehensive Support",
   contact: {
-    phone: "+91 76779 12567",
+    phone: "+91 79035 11395",
     phone2: "+91 70706 96936",
     whatsapp: "+91 70706 96936",
     email: "customercare@crystarawater.com",
